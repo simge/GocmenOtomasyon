@@ -64,6 +64,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -77,6 +78,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kayitekle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\düzenleicon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\düzenle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ekle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kayıtara.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listele.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arayeni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\araaaaaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ekleeee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listeeeee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listeeeeen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listeyeni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\düzenleme.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddddddd.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
