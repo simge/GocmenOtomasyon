@@ -32,6 +32,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\Program Files\mysql-connector-net-6.10.5-noinstall\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6">
+      <HintPath>..\..\..\..\..\..\Program Files\mysql-connector-net-6.10.5-noinstall\v4.5.2\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQL.Data.EntityFrameworkCore">
+      <HintPath>..\..\..\..\..\..\Program Files\mysql-connector-net-6.10.5-noinstall\v4.5.2\MySQL.Data.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQL.Data.EntityFrameworkCore.Design">
+      <HintPath>..\..\..\..\..\..\Program Files\mysql-connector-net-6.10.5-noinstall\v4.5.2\MySQL.Data.EntityFrameworkCore.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web">
+      <HintPath>..\..\..\..\..\..\Program Files\mysql-connector-net-6.10.5-noinstall\v4.5.2\MySql.Web.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,8 +66,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ekle_forms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ekle_forms.Designer.cs">
+      <DependentUpon>ekle_forms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ekle_forms.resx">
+      <DependentUpon>ekle_forms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +147,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ddddddd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
