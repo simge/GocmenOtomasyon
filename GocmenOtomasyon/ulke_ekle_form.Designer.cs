@@ -34,6 +34,9 @@
             this.ulkead = new System.Windows.Forms.TextBox();
             this.ulkeuyruk = new System.Windows.Forms.TextBox();
             this.ulkebttn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -81,19 +84,40 @@
             // 
             // ulkebttn
             // 
-            this.ulkebttn.Location = new System.Drawing.Point(99, 265);
+            this.ulkebttn.Location = new System.Drawing.Point(99, 267);
             this.ulkebttn.Name = "ulkebttn";
-            this.ulkebttn.Size = new System.Drawing.Size(75, 23);
+            this.ulkebttn.Size = new System.Drawing.Size(84, 27);
             this.ulkebttn.TabIndex = 5;
             this.ulkebttn.Text = "Ekle";
             this.ulkebttn.UseVisualStyleBackColor = true;
             this.ulkebttn.Click += new System.EventHandler(this.ulkebttn_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(99, 327);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 30);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Görüntüleme";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(621, 94);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(586, 263);
+            this.dataGridView1.TabIndex = 7;
             // 
             // ulke_ekle_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 520);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ulkebttn);
             this.Controls.Add(this.ulkeuyruk);
             this.Controls.Add(this.ulkead);
@@ -102,6 +126,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ulke_ekle_form";
             this.Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,5 +140,7 @@
         private System.Windows.Forms.TextBox ulkead;
         private System.Windows.Forms.TextBox ulkeuyruk;
         private System.Windows.Forms.Button ulkebttn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
