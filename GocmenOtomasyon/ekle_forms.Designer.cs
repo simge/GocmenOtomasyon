@@ -120,6 +120,7 @@
             this.ad.Name = "ad";
             this.ad.Size = new System.Drawing.Size(100, 22);
             this.ad.TabIndex = 7;
+            this.ad.TextChanged += new System.EventHandler(this.ad_TextChanged);
             // 
             // soyad
             // 

@@ -25,5 +25,19 @@ namespace GocmenOtomasyon
             form1.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            goc_ekle form_goc = new goc_ekle();
+            form_goc.Show();
+            this.Hide();
+        }
+
+        private void sehir_bttn_Click(object sender, EventArgs e)
+        {
+            sehir_ekle form_sehir = new sehir_ekle();
+            form_sehir.Show();
+            this.Hide();
+        }
     }
 }

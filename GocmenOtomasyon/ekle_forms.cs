@@ -209,5 +209,10 @@ namespace GocmenOtomasyon
         {
 
         }
+
+        private void ad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -72,6 +72,18 @@
     <Compile Include="ekle_forms.Designer.cs">
       <DependentUpon>ekle_forms.cs</DependentUpon>
     </Compile>
+    <Compile Include="sehir_ekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sehir_ekle.Designer.cs">
+      <DependentUpon>sehir_ekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goc_ekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goc_ekle.Designer.cs">
+      <DependentUpon>goc_ekle.cs</DependentUpon>
+    </Compile>
     <Compile Include="tablolar_ekleme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +97,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sehir_ekle.resx">
+      <DependentUpon>sehir_ekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goc_ekle.resx">
+      <DependentUpon>goc_ekle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tablolar_ekleme.resx">
       <DependentUpon>tablolar_ekleme.cs</DependentUpon>
