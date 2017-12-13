@@ -72,6 +72,12 @@
     <Compile Include="ekle_forms.Designer.cs">
       <DependentUpon>ekle_forms.cs</DependentUpon>
     </Compile>
+    <Compile Include="listeleme_formu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listeleme_formu.Designer.cs">
+      <DependentUpon>listeleme_formu.cs</DependentUpon>
+    </Compile>
     <Compile Include="yardımk_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listeleme_formu.resx">
+      <DependentUpon>listeleme_formu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="yardımk_form.resx">
       <DependentUpon>yardımk_form.cs</DependentUpon>

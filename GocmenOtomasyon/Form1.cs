@@ -83,7 +83,9 @@ namespace GocmenOtomasyon
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            listeleme_formu frm = new listeleme_formu();
+            frm.Show();
+            this.Hide();
         }
 
     }
