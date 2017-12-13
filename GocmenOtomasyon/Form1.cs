@@ -13,7 +13,7 @@ namespace GocmenOtomasyon
     public partial class Form1 : Form
     {
 
-        ekle_forms form_ekle = new ekle_forms();
+        
         public Form1()
         {
             InitializeComponent();
@@ -59,8 +59,11 @@ namespace GocmenOtomasyon
 
         private void button1_Click(object sender, EventArgs e)
         {
-            form_ekle.Show();
+            tablolar_ekleme frm = new tablolar_ekleme();
+            frm.Show();
             this.Hide();
+            // form_ekle.Show();
+            //  this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
