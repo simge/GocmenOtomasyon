@@ -39,5 +39,33 @@ namespace GocmenOtomasyon
             form_sehir.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ulke_ekle_form form_ulke = new ulke_ekle_form();
+            form_ulke.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            meslek_form form_meslek = new meslek_form();
+            form_meslek.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            kamp_form form_kamp = new kamp_form();
+            form_kamp.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            yardımk_form form_yk = new yardımk_form();
+            form_yk.Show();
+            this.Hide();
+        }
     }
 }

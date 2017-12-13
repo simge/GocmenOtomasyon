@@ -72,6 +72,30 @@
     <Compile Include="ekle_forms.Designer.cs">
       <DependentUpon>ekle_forms.cs</DependentUpon>
     </Compile>
+    <Compile Include="yardımk_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yardımk_form.Designer.cs">
+      <DependentUpon>yardımk_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kamp_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kamp_form.Designer.cs">
+      <DependentUpon>kamp_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="meslek_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="meslek_form.Designer.cs">
+      <DependentUpon>meslek_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ulke_ekle_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ulke_ekle_form.Designer.cs">
+      <DependentUpon>ulke_ekle_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="sehir_ekle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +121,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yardımk_form.resx">
+      <DependentUpon>yardımk_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kamp_form.resx">
+      <DependentUpon>kamp_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="meslek_form.resx">
+      <DependentUpon>meslek_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ulke_ekle_form.resx">
+      <DependentUpon>ulke_ekle_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sehir_ekle.resx">
       <DependentUpon>sehir_ekle.cs</DependentUpon>
