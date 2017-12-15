@@ -68,7 +68,9 @@ namespace GocmenOtomasyon
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            arama_gocmen frm = new arama_gocmen();
+            frm.Show();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
