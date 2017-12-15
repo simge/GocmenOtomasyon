@@ -34,6 +34,17 @@ namespace GocmenOtomasyon
 
             cmd.CommandText = "insert into tbl_yardim_kurulus(yk_ad) values ('"+ yarktext.Text+"')";
             cmd.ExecuteNonQuery();
+            if (yarktext is TextBox)
+            {
+                if (yarktext.Text == String.Empty)
+                {
+                    MessageBox.Show("Bu alan boş bırakılamaz!");
+                }
+                else
+                {
+                    MessageBox.Show("Kayıt veritabanına eklendi, işlemi görüntülemek için görüntüle butonuna basınız..");
+                }
+            }
             con.Close();
         }
 

@@ -9,49 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
-
 namespace GocmenOtomasyon
 {
-    public partial class ulke_ekle_form : Form
-        
+    public partial class listelemeform_ulke : Form
     {
-        MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=gocmenotomasyon");
-        private MySqlDataReader dr;
-        public ulke_ekle_form()
+        MySqlConnection con = new MySqlConnection();
+        public listelemeform_ulke()
         {
             InitializeComponent();
         }
 
-        private void ulkebttn_Click(object sender, EventArgs e)
-        {
-
-            con.Open();
-            MySqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-
-            cmd.CommandText = "insert into tbl_gocmen_ulkesi(ulke_ad,ulke_uyruk)values('" + ulkead.Text + "','" + ulkeuyruk.Text + "')";
-            cmd.ExecuteNonQuery();
-            if (ulkead is TextBox)
-            {
-                if (ulkead.Text == String.Empty)
-                {
-                    MessageBox.Show("Bu alan boş bırakılamaz!");
-                }
-                else
-                {
-                    MessageBox.Show("Kayıt veritabanına eklendi, işlemi görüntülemek için görüntüle butonuna basınız..");
-                }
-            }
-            con.Close();
-
-        }
-
-        private void ulkeuyruk_TextChanged(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void lst_goc_Click(object sender, EventArgs e)
         {
             try
             {
@@ -70,7 +43,7 @@ namespace GocmenOtomasyon
 
 
                 dataGridView1.DataSource = dTable; // here i have assign dTable object to the dataGridView1 object to display data.
-            
+
                 MyConn2.Close();
             }
             catch (Exception ex)
@@ -78,13 +51,6 @@ namespace GocmenOtomasyon
 
                 MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private void ulkead_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
-    }
-
+}

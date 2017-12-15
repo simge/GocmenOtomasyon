@@ -12,50 +12,20 @@ using MySql.Data.MySqlClient;
 
 namespace GocmenOtomasyon
 {
-    public partial class meslek_form : Form
+    public partial class listelemeform_yardımk : Form
     {
-
-        MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=gocmenotomasyon");
-        private MySqlDataReader dr;
-        public meslek_form()
+        public listelemeform_yardımk()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void meslekbtn_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            MySqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-
-            cmd.CommandText = "insert into tbl_meslek(meslek_ad)values('" + meslektxb.Text + "')";
-            cmd.ExecuteNonQuery();
-            if (meslektxb is TextBox)
-            {
-                if (meslektxb.Text == String.Empty)
-                {
-                    MessageBox.Show("Bu alan boş bırakılamaz!");
-                }
-                else
-                {
-                    MessageBox.Show("Kayıt veritabanına eklendi, işlemi görüntülemek için görüntüle butonuna basınız..");
-                }
-            }
-            con.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void lst_yk_Click(object sender, EventArgs e)
         {
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
                 //Display query
-                string Query = "select * from  tbl_meslek ";
+                string Query = "select * from  tbl_yardim_kurulus ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
@@ -76,8 +46,11 @@ namespace GocmenOtomasyon
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
-    }
-
+}

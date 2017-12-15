@@ -33,9 +33,31 @@ namespace GocmenOtomasyon
 
             ComboboxItem sehiritem = (ComboboxItem)kamp_cbx.SelectedItem;
             string sehir_value = sehiritem.Value.ToString();
+            if (kampadi is ComboboxItem)
+            {
+                if (kampadi.Text == String.Empty)
+                {
+                    MessageBox.Show("Bu alan boş bırakılamaz!");
+                }
+                else
+                {
+                    MessageBox.Show("Kayıt veritabanına eklendi, işlemi görüntülemek için görüntüle butonuna basınız..");
+                }
+            }
 
             cmd.CommandText = "insert into tbl_kamp(sehir_id,kamp_ad, kurul_trh) values ('" + Int32.Parse(sehir_value) + "','" + kampadi.Text + "','" + kamptrh.Text + "')";
             cmd.ExecuteNonQuery();
+            if (kampadi is TextBox)
+            {
+                if (kampadi.Text == String.Empty)
+                {
+                    MessageBox.Show("Bu alan boş bırakılamaz!");
+                }
+                else
+                {
+                    MessageBox.Show("Kayıt veritabanına eklendi, işlemi görüntülemek için görüntüle butonuna basınız..");
+                }
+            }
             con.Close();
         }
 

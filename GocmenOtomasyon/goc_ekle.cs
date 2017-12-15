@@ -32,7 +32,17 @@ namespace GocmenOtomasyon
 
             cmd.CommandText = "insert into tbl_goc(goc_tur,goc_trh)values('" + goc_tur.Text + "','" + goc_trh.Text + "')";
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Kayıt veritabanına eklendi, işlemi görüntülemek için görüntüle butonuna basınız..");
+            if (goc_tur is TextBox)
+            {
+                if (goc_tur.Text == String.Empty)
+                {
+                    MessageBox.Show("Bu alan boş bırakılamaz!");
+                }
+                else
+                {
+                    MessageBox.Show("Kayıt veritabanına eklendi, işlemi görüntülemek için görüntüle butonuna basınız..");
+                }
+            }
             con.Close();
 
         }
@@ -83,6 +93,21 @@ namespace GocmenOtomasyon
 
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void goc_trh_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void goctarihi_Click(object sender, EventArgs e)
+        {
 
         }
     }

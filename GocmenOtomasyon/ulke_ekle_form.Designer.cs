@@ -73,6 +73,7 @@
             this.ulkead.Name = "ulkead";
             this.ulkead.Size = new System.Drawing.Size(100, 22);
             this.ulkead.TabIndex = 3;
+            this.ulkead.TextChanged += new System.EventHandler(this.ulkead_TextChanged);
             // 
             // ulkeuyruk
             // 

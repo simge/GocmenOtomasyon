@@ -72,6 +72,48 @@
     <Compile Include="ekle_forms.Designer.cs">
       <DependentUpon>ekle_forms.cs</DependentUpon>
     </Compile>
+    <Compile Include="listelemeform_kamp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listelemeform_kamp.Designer.cs">
+      <DependentUpon>listelemeform_kamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listelemeform_meslek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listelemeform_meslek.Designer.cs">
+      <DependentUpon>listelemeform_meslek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listelemeform_goc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listelemeform_goc.Designer.cs">
+      <DependentUpon>listelemeform_goc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listelemeform_gocmen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listelemeform_gocmen.Designer.cs">
+      <DependentUpon>listelemeform_gocmen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listelemeform_sehir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listelemeform_sehir.Designer.cs">
+      <DependentUpon>listelemeform_sehir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listelemeform_ulke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listelemeform_ulke.Designer.cs">
+      <DependentUpon>listelemeform_ulke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listelemeform_yardımk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listelemeform_yardımk.Designer.cs">
+      <DependentUpon>listelemeform_yardımk.cs</DependentUpon>
+    </Compile>
     <Compile Include="listeleme_formu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +169,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listelemeform_kamp.resx">
+      <DependentUpon>listelemeform_kamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listelemeform_meslek.resx">
+      <DependentUpon>listelemeform_meslek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listelemeform_goc.resx">
+      <DependentUpon>listelemeform_goc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listelemeform_gocmen.resx">
+      <DependentUpon>listelemeform_gocmen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listelemeform_sehir.resx">
+      <DependentUpon>listelemeform_sehir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listelemeform_ulke.resx">
+      <DependentUpon>listelemeform_ulke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listelemeform_yardımk.resx">
+      <DependentUpon>listelemeform_yardımk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="listeleme_formu.resx">
       <DependentUpon>listeleme_formu.cs</DependentUpon>

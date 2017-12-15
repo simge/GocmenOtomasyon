@@ -59,6 +59,7 @@
             this.goctarihi.Size = new System.Drawing.Size(80, 17);
             this.goctarihi.TabIndex = 2;
             this.goctarihi.Text = "Göç Tarih";
+            this.goctarihi.Click += new System.EventHandler(this.goctarihi_Click);
             // 
             // goc_tur
             // 
@@ -85,6 +86,7 @@
             this.goc_trh.Name = "goc_trh";
             this.goc_trh.Size = new System.Drawing.Size(200, 22);
             this.goc_trh.TabIndex = 5;
+            this.goc_trh.ValueChanged += new System.EventHandler(this.goc_trh_ValueChanged);
             // 
             // ekleme_button
             // 
@@ -114,6 +116,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(653, 326);
             this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // goc_ekle
             // 

@@ -19,42 +19,42 @@ namespace GocmenOtomasyon
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ekle_forms frm = new ekle_forms();
+            listelemeform_gocmen frm = new listelemeform_gocmen();
             frm.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            goc_ekle frm1 = new goc_ekle();
-            frm1.Show();
-            this.Show();
+            listelemeform_goc goc = new listelemeform_goc();
+            goc.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            meslek_form frm2 = new meslek_form();
+            listelemeform_meslek frm2 = new listelemeform_meslek();
             frm2.Show();
             this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ulke_ekle_form frm3 = new ulke_ekle_form();
+            listelemeform_ulke frm3 = new listelemeform_ulke();
             frm3.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            kamp_form frm4 = new kamp_form();
+            listelemeform_kamp frm4 = new listelemeform_kamp();
             frm4.Show();
             this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            sehir_ekle frm5 = new sehir_ekle();
+            listelemeform_sehir frm5 = new listelemeform_sehir();
             frm5.Show();
             this.Hide();
 
@@ -62,7 +62,7 @@ namespace GocmenOtomasyon
 
         private void button7_Click(object sender, EventArgs e)
         {
-            yardımk_form frm6 = new yardımk_form();
+            listelemeform_yardımk frm6 = new listelemeform_yardımk();
             frm6.Show();
             this.Hide();
 
