@@ -32,6 +32,20 @@ namespace GocmenOtomasyon
             cmd.CommandType = CommandType.Text;
 
             cmd.CommandText = "insert into tbl_kaldigi_sehir(sehir_ad)values('" + sehir_tbox.Text + "')";
+
+
+            if (sehir_tbox is TextBox)
+            {
+                if (sehir_tbox.Text == String.Empty)
+                {
+                    MessageBox.Show("Bu alan boş bırakılamaz!");
+                }
+                else
+                {
+                    MessageBox.Show("Kayıt veritabanına eklendi, işlemi görüntülemek için görüntüle butonuna basınız..");
+                }
+            }
+
             cmd.ExecuteNonQuery();
             con.Close();
         }

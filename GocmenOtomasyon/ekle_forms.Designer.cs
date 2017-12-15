@@ -43,7 +43,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.goc = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.ulke = new System.Windows.Forms.ComboBox();
             this.sehiralani = new System.Windows.Forms.ComboBox();
             this.kampalani = new System.Windows.Forms.ComboBox();
@@ -53,23 +52,26 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(40, 30);
+            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.Location = new System.Drawing.Point(137, 30);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 27);
+            this.textBox1.Size = new System.Drawing.Size(301, 30);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Gocmen Tablosu İslemleri";
+            this.textBox1.Text = "Göçmen Tablosu İşlemleri";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 107);
+            this.label2.Location = new System.Drawing.Point(42, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(24, 17);
             this.label2.TabIndex = 2;
@@ -156,8 +158,11 @@
             this.dataGridView1.Location = new System.Drawing.Point(606, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(731, 462);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
             // 
             // button1
             // 
@@ -187,15 +192,6 @@
             this.goc.Size = new System.Drawing.Size(404, 24);
             this.goc.TabIndex = 16;
             this.goc.SelectedIndexChanged += new System.EventHandler(this.goc_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(332, 567);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "label1";
             // 
             // ulke
             // 
@@ -278,11 +274,22 @@
             this.label11.TabIndex = 26;
             this.label11.Text = "Yapılan Meslek";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(32, 580);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 17);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Alanları Boş Bırakmayınız!";
+            // 
             // ekle_forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1417, 712);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -292,7 +299,6 @@
             this.Controls.Add(this.kampalani);
             this.Controls.Add(this.sehiralani);
             this.Controls.Add(this.ulke);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.goc);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -334,7 +340,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox goc;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ulke;
         private System.Windows.Forms.ComboBox sehiralani;
         private System.Windows.Forms.ComboBox kampalani;
@@ -344,5 +349,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -32,6 +32,7 @@ namespace GocmenOtomasyon
 
             cmd.CommandText = "insert into tbl_goc(goc_tur,goc_trh)values('" + goc_tur.Text + "','" + goc_trh.Text + "')";
             cmd.ExecuteNonQuery();
+            MessageBox.Show("Kayıt veritabanına eklendi, işlemi görüntülemek için görüntüle butonuna basınız..");
             con.Close();
 
         }

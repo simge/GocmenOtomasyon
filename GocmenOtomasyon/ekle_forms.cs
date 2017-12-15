@@ -15,16 +15,18 @@ namespace GocmenOtomasyon
 {
     public partial class ekle_forms : Form
     {
-
+        
         MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=gocmenotomasyon");
         private MySqlDataReader dr;
         private MySqlDataReader dr1;
         private MySqlDataReader dr2;
         private MySqlDataReader dr3;
         private MySqlDataReader dr4;
+        
         public ekle_forms()
         {
             InitializeComponent();
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -77,13 +79,15 @@ namespace GocmenOtomasyon
 
             cmd.CommandText = "insert into tbl_gocmen (goc_id, ulke_id, sehir_id, kamp_id, meslek_id, gocmen_ad, gocmen_soyad, gocmen_yas, gocmen_cinsiyet, gocmen_egitim_duzeyi )values('" + Int32.Parse(goc_value) + "', '" + Int32.Parse(ulke_value) + "', '" + Int32.Parse(sehiralani_value) + "', '" + Int32.Parse(kampalani_value) + "','" + Int32.Parse(meslekalani_value) + "', '" + ad.Text+"', '"+soyad.Text+ "', '" + yas.Text + "', '" + cinsiyet.Text + "','" + egitim_duzeyi.Text + "')";
             cmd.ExecuteNonQuery();
+            MessageBox.Show("İşlem veritabanında kaydedildi görüntülemek için görüntüle butonuna basınız..");
             con.Close();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-                try
+            
+            try
                 {
                     string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
                     //Display query
@@ -240,5 +244,38 @@ namespace GocmenOtomasyon
         {
 
         }
+
+       
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                ad.Text = row.Cells["gocmen_ad"].Value.ToString();
+                soyad.Text = row.Cells["gocmen_soyad"].Value.ToString();
+                yas.Text = row.Cells["gocmen_yas"].Value.ToString();
+                cinsiyet.Text = row.Cells["gocmen_cinsiyet"].Value.ToString();
+                egitim_duzeyi.Text = row.Cells["gocmen_egitim_duzeyi"].Value.ToString();
+
+            }
+
+
+            // string myValue = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
+            //  ad.Text = myValue;
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            // string myValue = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
+            // ad.Text = myValue;
+        }
+
+        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            //soyad.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+
+        }
+
     }
 }
