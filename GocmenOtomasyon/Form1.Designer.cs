@@ -96,7 +96,7 @@
             this.duzenle_button.Name = "duzenle_button";
             this.duzenle_button.Size = new System.Drawing.Size(93, 42);
             this.duzenle_button.TabIndex = 9;
-            this.duzenle_button.Text = "Kayıt Düzenle";
+            this.duzenle_button.Text = "Kayıt Güncelle";
             this.duzenle_button.UseVisualStyleBackColor = true;
             this.duzenle_button.Click += new System.EventHandler(this.button4_Click);
             // 

@@ -84,7 +84,7 @@ namespace GocmenOtomasyon
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
+           guncelleme_form_ekranı frm = new guncelleme_form_ekranı();
             frm.Show();
             this.Hide();
         }
