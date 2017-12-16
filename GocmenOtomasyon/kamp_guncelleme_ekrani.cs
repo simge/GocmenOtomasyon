@@ -45,5 +45,14 @@ namespace GocmenOtomasyon
             scb = new MySqlCommandBuilder(sda);
             sda.Update(dt);
         }
+
+        private void don_btn_Click(object sender, EventArgs e)
+        {
+            kamp_guncelleme_ekrani formkapa = new kamp_guncelleme_ekrani();
+            formkapa.Close();
+            guncelleme_form_ekranı form = new guncelleme_form_ekranı();
+            form.Show();
+            this.Hide();
+        }
     }
 }

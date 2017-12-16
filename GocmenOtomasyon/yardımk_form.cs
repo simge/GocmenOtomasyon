@@ -89,6 +89,15 @@ namespace GocmenOtomasyon
 
             MyConn2.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            yardımk_form formkapa = new yardımk_form();
+            formkapa.Close();
+            tablolar_ekleme form = new tablolar_ekleme();
+            form.Show();
+            this.Hide();
+        }
     }
     }
 

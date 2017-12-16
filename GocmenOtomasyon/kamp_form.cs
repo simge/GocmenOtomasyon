@@ -124,6 +124,15 @@ namespace GocmenOtomasyon
         {
 
         }
+
+        private void don_btn_Click(object sender, EventArgs e)
+        {
+            kamp_form formkapa = new kamp_form();
+            formkapa.Close();
+            tablolar_ekleme form = new tablolar_ekleme();
+            form.Show();
+            this.Hide();
+        }
     }
  }
 

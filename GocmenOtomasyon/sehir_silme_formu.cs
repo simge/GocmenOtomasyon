@@ -85,5 +85,14 @@ namespace GocmenOtomasyon
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            sehir_silme_formu formkapa = new sehir_silme_formu();
+            formkapa.Close();
+            kayıt_silme_formu form = new kayıt_silme_formu();
+            form.Show();
+            this.Hide();
+        }
     }
 }

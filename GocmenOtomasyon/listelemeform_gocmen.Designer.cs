@@ -31,6 +31,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.don_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,11 +69,22 @@
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // don_btn
+            // 
+            this.don_btn.Location = new System.Drawing.Point(39, 517);
+            this.don_btn.Name = "don_btn";
+            this.don_btn.Size = new System.Drawing.Size(75, 23);
+            this.don_btn.TabIndex = 40;
+            this.don_btn.Text = "Geri";
+            this.don_btn.UseVisualStyleBackColor = true;
+            this.don_btn.Click += new System.EventHandler(this.don_btn_Click);
+            // 
             // listelemeform_gocmen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1321, 647);
+            this.Controls.Add(this.don_btn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
@@ -88,5 +100,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button don_btn;
     }
 }

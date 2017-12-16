@@ -35,6 +35,7 @@
             this.ulke_listeleme = new System.Windows.Forms.Button();
             this.sehir_listeleme = new System.Windows.Forms.Button();
             this.kurulus_listeleme = new System.Windows.Forms.Button();
+            this.don_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // gocmen_liste
@@ -114,11 +115,22 @@
             this.kurulus_listeleme.UseVisualStyleBackColor = true;
             this.kurulus_listeleme.Click += new System.EventHandler(this.button7_Click);
             // 
+            // don_btn
+            // 
+            this.don_btn.Location = new System.Drawing.Point(110, 421);
+            this.don_btn.Name = "don_btn";
+            this.don_btn.Size = new System.Drawing.Size(75, 23);
+            this.don_btn.TabIndex = 7;
+            this.don_btn.Text = "Geri";
+            this.don_btn.UseVisualStyleBackColor = true;
+            this.don_btn.Click += new System.EventHandler(this.don_btn_Click);
+            // 
             // listeleme_formu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1301, 529);
+            this.Controls.Add(this.don_btn);
             this.Controls.Add(this.kurulus_listeleme);
             this.Controls.Add(this.sehir_listeleme);
             this.Controls.Add(this.ulke_listeleme);
@@ -141,5 +153,6 @@
         private System.Windows.Forms.Button ulke_listeleme;
         private System.Windows.Forms.Button sehir_listeleme;
         private System.Windows.Forms.Button kurulus_listeleme;
+        private System.Windows.Forms.Button don_btn;
     }
 }

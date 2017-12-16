@@ -39,6 +39,7 @@
             this.gorun_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
+            this.don_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,11 +147,22 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Bu alan boş geçilemez!";
             // 
+            // don_btn
+            // 
+            this.don_btn.Location = new System.Drawing.Point(70, 437);
+            this.don_btn.Name = "don_btn";
+            this.don_btn.Size = new System.Drawing.Size(75, 23);
+            this.don_btn.TabIndex = 13;
+            this.don_btn.Text = "Geri";
+            this.don_btn.UseVisualStyleBackColor = true;
+            this.don_btn.Click += new System.EventHandler(this.don_btn_Click);
+            // 
             // kamp_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1290, 510);
+            this.Controls.Add(this.don_btn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gorun_btn);
@@ -184,5 +196,6 @@
         private System.Windows.Forms.Button gorun_btn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button don_btn;
     }
 }

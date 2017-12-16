@@ -105,6 +105,14 @@ namespace GocmenOtomasyon
 
         }
 
+        private void geri_btn_Click(object sender, EventArgs e)
+        {
+            goc_ekle formkapa = new goc_ekle();
+            formkapa.Close();
+            tablolar_ekleme form = new tablolar_ekleme();
+            form.Show();
+            this.Hide();
+        }
     }
 }
 

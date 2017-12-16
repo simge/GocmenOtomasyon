@@ -33,6 +33,7 @@
             this.sil = new System.Windows.Forms.Button();
             this.giristxb = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.don_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,11 +85,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(1210, 324);
             this.dataGridView1.TabIndex = 5;
             // 
+            // don_btn
+            // 
+            this.don_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.don_btn.Location = new System.Drawing.Point(1144, 407);
+            this.don_btn.Name = "don_btn";
+            this.don_btn.Size = new System.Drawing.Size(131, 31);
+            this.don_btn.TabIndex = 10;
+            this.don_btn.Text = "Geri";
+            this.don_btn.UseVisualStyleBackColor = true;
+            this.don_btn.Click += new System.EventHandler(this.don_btn_Click);
+            // 
             // goc_kayit_silme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1319, 588);
+            this.Controls.Add(this.don_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.yenile);
             this.Controls.Add(this.sil);
@@ -110,5 +123,6 @@
         private System.Windows.Forms.Button sil;
         private System.Windows.Forms.TextBox giristxb;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button don_btn;
     }
 }

@@ -88,5 +88,14 @@ namespace GocmenOtomasyon
         {
 
         }
+
+        private void don_btn_Click(object sender, EventArgs e)
+        {
+            gocmen_guncel_form formkapa = new gocmen_guncel_form();
+            formkapa.Close();
+            guncelleme_form_ekranı form = new guncelleme_form_ekranı();
+            form.Show();
+            this.Hide();
+        }
     }
 }

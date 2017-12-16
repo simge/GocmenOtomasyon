@@ -46,5 +46,14 @@ namespace GocmenOtomasyon
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void don_btn_Click(object sender, EventArgs e)
+        {
+            goc_guncelleme_ekrani formkapa = new goc_guncelleme_ekrani();
+            formkapa.Close();
+            guncelleme_form_ekranı form = new guncelleme_form_ekranı();
+            form.Show();
+            this.Hide();
+        }
     }
 }

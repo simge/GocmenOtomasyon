@@ -53,6 +53,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.don_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,7 +163,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(731, 462);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            
             // 
             // ekle_btn
             // 
@@ -284,11 +284,22 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Alanları Boş Bırakmayınız!";
             // 
-            // ekle_forms
+            // don_btn
+            // 
+            this.don_btn.Location = new System.Drawing.Point(1208, 514);
+            this.don_btn.Name = "don_btn";
+            this.don_btn.Size = new System.Drawing.Size(75, 23);
+            this.don_btn.TabIndex = 30;
+            this.don_btn.Text = "Geri";
+            this.don_btn.UseVisualStyleBackColor = true;
+            this.don_btn.Click += new System.EventHandler(this.don_btn_Click);
+            // 
+            // gocmen_ekleme_formu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1417, 712);
+            this.Controls.Add(this.don_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -314,7 +325,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.etiket_basligi);
-            this.Name = "ekle_forms";
+            this.Name = "gocmen_ekleme_formu";
             this.Text = "Kayıt Ekleme Formu";
             this.Load += new System.EventHandler(this.ekle_forms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -350,5 +361,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button don_btn;
     }
 }

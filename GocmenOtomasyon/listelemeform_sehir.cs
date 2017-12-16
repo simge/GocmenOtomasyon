@@ -46,5 +46,14 @@ namespace GocmenOtomasyon
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listelemeform_sehir formkapa = new listelemeform_sehir();
+            formkapa.Close();
+            listeleme_formu form = new listeleme_formu();
+            form.Show();
+            this.Hide();
+        }
     }
 }

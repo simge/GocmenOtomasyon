@@ -65,5 +65,14 @@ namespace GocmenOtomasyon
         {
 
         }
+
+        private void don_btn_Click(object sender, EventArgs e)
+        {
+            arama_gocmen formkapa = new arama_gocmen();
+            formkapa.Close();
+            Form1 form = new Form1();
+            form.Show();
+            this.Hide();
+        }
     }
 }

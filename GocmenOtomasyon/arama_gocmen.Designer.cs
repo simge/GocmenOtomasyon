@@ -32,6 +32,7 @@
             this.ara_txb = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ara_btn = new System.Windows.Forms.Button();
+            this.don_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,11 +75,22 @@
             this.ara_btn.UseVisualStyleBackColor = true;
             this.ara_btn.Click += new System.EventHandler(this.ara_btn_Click);
             // 
+            // don_btn
+            // 
+            this.don_btn.Location = new System.Drawing.Point(924, 53);
+            this.don_btn.Name = "don_btn";
+            this.don_btn.Size = new System.Drawing.Size(108, 23);
+            this.don_btn.TabIndex = 4;
+            this.don_btn.Text = "Dön";
+            this.don_btn.UseVisualStyleBackColor = true;
+            this.don_btn.Click += new System.EventHandler(this.don_btn_Click);
+            // 
             // arama_gocmen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1325, 640);
+            this.Controls.Add(this.don_btn);
             this.Controls.Add(this.ara_btn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.ara_txb);
@@ -98,5 +110,6 @@
         private System.Windows.Forms.TextBox ara_txb;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button ara_btn;
+        private System.Windows.Forms.Button don_btn;
     }
 }

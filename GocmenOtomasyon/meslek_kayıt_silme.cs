@@ -83,5 +83,14 @@ namespace GocmenOtomasyon
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            meslek_kayıt_silme formkapa = new meslek_kayıt_silme();
+            formkapa.Close();
+            kayıt_silme_formu form = new kayıt_silme_formu();
+            form.Show();
+            this.Hide();
+        }
     }
 }

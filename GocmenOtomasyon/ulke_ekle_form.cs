@@ -99,6 +99,15 @@ namespace GocmenOtomasyon
 
             MyConn2.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ulke_ekle_form formkapa = new ulke_ekle_form();
+            formkapa.Close();
+            tablolar_ekleme form = new tablolar_ekleme();
+            form.Show();
+            this.Hide();
+        }
     }
  }
 

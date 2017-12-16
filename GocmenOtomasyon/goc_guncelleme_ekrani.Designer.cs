@@ -32,6 +32,7 @@
             this.yenile_btn = new System.Windows.Forms.Button();
             this.guncel_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.don_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,11 +77,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(1316, 407);
             this.dataGridView1.TabIndex = 45;
             // 
+            // don_btn
+            // 
+            this.don_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.don_btn.Location = new System.Drawing.Point(13, 463);
+            this.don_btn.Name = "don_btn";
+            this.don_btn.Size = new System.Drawing.Size(129, 65);
+            this.don_btn.TabIndex = 49;
+            this.don_btn.Text = "Geri";
+            this.don_btn.UseVisualStyleBackColor = true;
+            this.don_btn.Click += new System.EventHandler(this.don_btn_Click);
+            // 
             // goc_guncelleme_ekrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 526);
+            this.Controls.Add(this.don_btn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.yenile_btn);
             this.Controls.Add(this.guncel_btn);
@@ -100,5 +113,6 @@
         private System.Windows.Forms.Button yenile_btn;
         private System.Windows.Forms.Button guncel_btn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button don_btn;
     }
 }

@@ -35,6 +35,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.kk_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -84,7 +86,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.Location = new System.Drawing.Point(82, 213);
+            this.button5.Location = new System.Drawing.Point(12, 213);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(220, 65);
             this.button5.TabIndex = 4;
@@ -95,7 +97,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button7.Location = new System.Drawing.Point(773, 213);
+            this.button7.Location = new System.Drawing.Point(604, 213);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(301, 65);
             this.button7.TabIndex = 6;
@@ -106,7 +108,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.Location = new System.Drawing.Point(423, 213);
+            this.button6.Location = new System.Drawing.Point(294, 213);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(249, 65);
             this.button6.TabIndex = 5;
@@ -114,11 +116,34 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(82, 370);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Geri";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // kk_btn
+            // 
+            this.kk_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kk_btn.Location = new System.Drawing.Point(988, 213);
+            this.kk_btn.Name = "kk_btn";
+            this.kk_btn.Size = new System.Drawing.Size(223, 65);
+            this.kk_btn.TabIndex = 8;
+            this.kk_btn.Text = "İlgili Kamp/Kuruluş";
+            this.kk_btn.UseVisualStyleBackColor = true;
+            this.kk_btn.Click += new System.EventHandler(this.kk_btn_Click);
+            // 
             // tablolar_ekleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1266, 547);
+            this.Controls.Add(this.kk_btn);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -141,5 +166,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button kk_btn;
     }
 }

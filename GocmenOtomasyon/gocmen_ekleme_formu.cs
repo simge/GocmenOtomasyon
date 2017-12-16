@@ -268,5 +268,13 @@ namespace GocmenOtomasyon
 
         }
 
+        private void don_btn_Click(object sender, EventArgs e)
+        {
+            gocmen_ekleme_formu formkapa = new gocmen_ekleme_formu();
+            formkapa.Close();
+            tablolar_ekleme form = new tablolar_ekleme();
+            form.Show();
+            this.Hide();
+        }
     }
 }

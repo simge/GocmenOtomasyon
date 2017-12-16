@@ -67,5 +67,19 @@ namespace GocmenOtomasyon
             form_yk.Show();
             this.Hide();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            tablolar_ekleme formkapa = new tablolar_ekleme();
+            formkapa.Close();
+            Form1 form = new Form1();
+            form.Show();
+            this.Hide();
+        }
+
+        private void kk_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

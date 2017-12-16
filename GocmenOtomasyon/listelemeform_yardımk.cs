@@ -49,5 +49,14 @@ namespace GocmenOtomasyon
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listelemeform_yardımk formkapa = new listelemeform_yardımk();
+            formkapa.Close();
+            listeleme_formu form = new listeleme_formu();
+            form.Show();
+            this.Hide();
+        }
     }
 }

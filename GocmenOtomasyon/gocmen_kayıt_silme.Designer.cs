@@ -34,6 +34,7 @@
             this.yenile = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.don_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,11 +96,23 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Göçmen Kaydı Silinmesi";
             // 
+            // don_btn
+            // 
+            this.don_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.don_btn.Location = new System.Drawing.Point(1068, 400);
+            this.don_btn.Name = "don_btn";
+            this.don_btn.Size = new System.Drawing.Size(129, 31);
+            this.don_btn.TabIndex = 6;
+            this.don_btn.Text = "Geri";
+            this.don_btn.UseVisualStyleBackColor = true;
+            this.don_btn.Click += new System.EventHandler(this.don_btn_Click);
+            // 
             // gocmen_kayıt_silme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1318, 574);
+            this.Controls.Add(this.don_btn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.yenile);
@@ -123,5 +136,6 @@
         private System.Windows.Forms.Button yenile;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button don_btn;
     }
 }

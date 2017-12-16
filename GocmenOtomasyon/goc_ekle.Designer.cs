@@ -36,6 +36,7 @@
             this.ekleme_button = new System.Windows.Forms.Button();
             this.goc_goruntu = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.geri_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,11 +121,23 @@
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // geri_btn
+            // 
+            this.geri_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.geri_btn.Location = new System.Drawing.Point(279, 375);
+            this.geri_btn.Name = "geri_btn";
+            this.geri_btn.Size = new System.Drawing.Size(111, 39);
+            this.geri_btn.TabIndex = 9;
+            this.geri_btn.Text = "Geri";
+            this.geri_btn.UseVisualStyleBackColor = true;
+            this.geri_btn.Click += new System.EventHandler(this.geri_btn_Click);
+            // 
             // goc_ekle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1298, 545);
+            this.Controls.Add(this.geri_btn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.goc_goruntu);
             this.Controls.Add(this.ekleme_button);
@@ -151,5 +164,6 @@
         private System.Windows.Forms.Button ekleme_button;
         private System.Windows.Forms.Button goc_goruntu;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button geri_btn;
     }
 }

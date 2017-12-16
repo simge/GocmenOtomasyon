@@ -78,6 +78,15 @@ namespace GocmenOtomasyon
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            sehir_ekle formkapa = new sehir_ekle();
+            formkapa.Close();
+            tablolar_ekleme form = new tablolar_ekleme();
+            form.Show();
+            this.Hide();
+        }
     }
  }
 
