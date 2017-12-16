@@ -10,12 +10,11 @@ using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
-
 namespace GocmenOtomasyon
 {
-    public partial class ekle_forms : Form
+    public partial class gocmen_ekleme_formu : Form
     {
-        
+
         MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=gocmenotomasyon");
         private MySqlDataReader dr;
         private MySqlDataReader dr1;
@@ -23,39 +22,13 @@ namespace GocmenOtomasyon
         private MySqlDataReader dr3;
         private MySqlDataReader dr4;
         
-        public ekle_forms()
+        public gocmen_ekleme_formu()
         {
             InitializeComponent();
             
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-     
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void ekle_btn_Click(object sender, EventArgs e)
         {
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
@@ -84,27 +57,25 @@ namespace GocmenOtomasyon
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void goruntu_btn_Click(object sender, EventArgs e)
         {
             
             try
                 {
                     string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
-                    //Display query
+                    //Sorgu Görüntüleme
                     string Query = "select * from  tbl_gocmen ";
                     MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                     MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
-                     MyConn2.Open();
-                    //For offline connection we weill use  MySqlDataAdapter class.
+                    MyConn2.Open();
+                    
                     MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
                     MyAdapter.SelectCommand = MyCommand2;
                     DataTable dTable = new DataTable();
                     MyAdapter.Fill(dTable);
 
-
-                    dataGridView1.DataSource = dTable; // here i have assign dTable object to the dataGridView1 object to display data.
-
+                    dataGridView1.DataSource = dTable; 
                     MyConn2.Close();
                 }
                 catch (Exception ex)
@@ -117,6 +88,22 @@ namespace GocmenOtomasyon
 
         private void ekle_forms_Load(object sender, EventArgs e)
         {
+            string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
+            //Sorgu Görüntüleme
+            string Query = "select * from  tbl_gocmen ";
+            MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+            MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+
+            MyConn2.Open();
+
+            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+            MyAdapter.SelectCommand = MyCommand2;
+            DataTable dTable = new DataTable();
+            MyAdapter.Fill(dTable);
+
+            dataGridView1.DataSource = dTable;
+            MyConn2.Close();
+
             con.Open();
             MySqlCommand goc_connect = con.CreateCommand();
             goc_connect.CommandType = CommandType.Text;
@@ -200,11 +187,6 @@ namespace GocmenOtomasyon
             con.Close();
         }
 
-
-
-
-
-        
         public class ComboboxItem
         {
             public string Text { get; set; }
@@ -213,6 +195,21 @@ namespace GocmenOtomasyon
             {
                 return Text;
             }
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                ad.Text = row.Cells["gocmen_ad"].Value.ToString();
+                soyad.Text = row.Cells["gocmen_soyad"].Value.ToString();
+                yas.Text = row.Cells["gocmen_yas"].Value.ToString();
+                cinsiyet.Text = row.Cells["gocmen_cinsiyet"].Value.ToString();
+                egitim_duzeyi.Text = row.Cells["gocmen_egitim_duzeyi"].Value.ToString();
+
+            }
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -244,36 +241,30 @@ namespace GocmenOtomasyon
         {
 
         }
-
-       
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+      
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-                ad.Text = row.Cells["gocmen_ad"].Value.ToString();
-                soyad.Text = row.Cells["gocmen_soyad"].Value.ToString();
-                yas.Text = row.Cells["gocmen_yas"].Value.ToString();
-                cinsiyet.Text = row.Cells["gocmen_cinsiyet"].Value.ToString();
-                egitim_duzeyi.Text = row.Cells["gocmen_egitim_duzeyi"].Value.ToString();
-
-            }
-
-
-            // string myValue = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
-            //  ad.Text = myValue;
         }
 
-        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            // string myValue = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
-            // ad.Text = myValue;
+
         }
 
-        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            //soyad.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+
+        }
+
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
 

@@ -24,35 +24,15 @@ namespace GocmenOtomasyon
         {
             InitializeComponent();
         }
-
-
-        private void arama_gocmen_Load(object sender, EventArgs e)
+        private void arama_gocmen_Load_1(object sender, EventArgs e)
         {
-
-            // string sql = "select *from tbl_gocmen";
-            searchData("");
-           
+            MySqlConnection con = new MySqlConnection("server = localhost; user id = root; database = gocmenotomasyon");
+            adapter = new MySqlDataAdapter(@"SELECT `gocmen_id`, `goc_id`, `ulke_id`, `sehir_id`, `kamp_id`, `meslek_id`, `gocmen_ad`, `gocmen_soyad`, `gocmen_yas`, `gocmen_cinsiyet`, `gocmen_egitim_duzeyi` FROM `tbl_gocmen`", con);
+            table = new DataTable();
+            adapter.Fill(table);
+            dataGridView1.DataSource = table;
         }
-
-       
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void ara_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-       
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         public void searchData(string valueToSearch)
         {
             string query = "select *from tbl_gocmen where CONCAT( `gocmen_id`, `goc_id`, `ulke_id`, `sehir_id`, `kamp_id`, `meslek_id`, `gocmen_ad`, `gocmen_soyad`, `gocmen_yas`, `gocmen_cinsiyet`, `gocmen_egitim_duzeyi`) like'%"+valueToSearch+ "%' ";
@@ -61,7 +41,6 @@ namespace GocmenOtomasyon
             table = new DataTable();
             adapter.Fill(table);
             dataGridView1.DataSource = table;
-
             
         }
 
@@ -69,9 +48,22 @@ namespace GocmenOtomasyon
         {
             string valueToSearch = ara_txb.Text.ToString();
             searchData(valueToSearch);
+            
+        }
 
+        
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-          
+        }
+        private void ara_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

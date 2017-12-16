@@ -23,8 +23,6 @@ namespace GocmenOtomasyon
         private void baglan()
         {
             string bag;
-
-            
             MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder(@"server=localhost;user id=root;database=gocmenotomasyon");
            
             bag = build.ToString();
@@ -42,14 +40,7 @@ namespace GocmenOtomasyon
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
         }
-
-       
-
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
         private void kayıt_silmeform_Load(object sender, EventArgs e)
         {
             baglan();
@@ -81,6 +72,27 @@ namespace GocmenOtomasyon
         {
             string bag;
 
+            MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder(@"server=localhost;user id=root;database=gocmenotomasyon");
+
+            bag = build.ToString();
+            baglanti = new MySqlConnection(bag);
+
+            string sql = "SELECT * FROM tbl_gocmen";
+            DataTable dt = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand();
+
+            command.CommandText = sql;
+            command.Connection = baglanti;
+            adapter.SelectCommand = command;
+            baglanti.Open();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void gocmen_kayıt_silme_Load(object sender, EventArgs e)
+        {
+            string bag;
 
             MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder(@"server=localhost;user id=root;database=gocmenotomasyon");
 

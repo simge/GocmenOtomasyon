@@ -68,8 +68,27 @@ namespace GocmenOtomasyon
         private void yenile_Click(object sender, EventArgs e)
         {
             string bag;
+            MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder(@"server=localhost;user id=root;database=gocmenotomasyon");
 
+            bag = build.ToString();
+            baglanti = new MySqlConnection(bag);
 
+            string sql = "SELECT * FROM tbl_gocmen_ulkesi";
+            DataTable dt = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand();
+
+            command.CommandText = sql;
+            command.Connection = baglanti;
+            adapter.SelectCommand = command;
+            baglanti.Open();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void ulke_silme_formu_Load(object sender, EventArgs e)
+        {
+            string bag;
             MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder(@"server=localhost;user id=root;database=gocmenotomasyon");
 
             bag = build.ToString();

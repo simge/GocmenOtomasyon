@@ -22,8 +22,6 @@ namespace GocmenOtomasyon
         private void baglan()
         {
             string bag;
-
-
             MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder(@"server=localhost;user id=root;database=gocmenotomasyon");
 
             bag = build.ToString();

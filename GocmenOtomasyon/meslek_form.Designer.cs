@@ -67,9 +67,10 @@
             // 
             // meslekbtn
             // 
+            this.meslekbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.meslekbtn.Location = new System.Drawing.Point(92, 218);
             this.meslekbtn.Name = "meslekbtn";
-            this.meslekbtn.Size = new System.Drawing.Size(75, 23);
+            this.meslekbtn.Size = new System.Drawing.Size(97, 32);
             this.meslekbtn.TabIndex = 3;
             this.meslekbtn.Text = "Ekle";
             this.meslekbtn.UseVisualStyleBackColor = true;
@@ -77,9 +78,10 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(277, 218);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 23);
+            this.button1.Size = new System.Drawing.Size(147, 32);
             this.button1.TabIndex = 4;
             this.button1.Text = "Görüntüleme";
             this.button1.UseVisualStyleBackColor = true;

@@ -85,7 +85,7 @@
             this.Controls.Add(this.label1);
             this.Name = "arama_gocmen";
             this.Text = "arama_gocmen";
-            //this.Load += new System.EventHandler(this.arama_gocmen_Load_1);
+            this.Load += new System.EventHandler(this.arama_gocmen_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

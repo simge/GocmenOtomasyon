@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.yarktext = new System.Windows.Forms.TextBox();
             this.ykbttn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.goruntu_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -63,35 +63,36 @@
             this.yarktext.Name = "yarktext";
             this.yarktext.Size = new System.Drawing.Size(132, 22);
             this.yarktext.TabIndex = 2;
-            this.yarktext.TextChanged += new System.EventHandler(this.yarktext_TextChanged);
             // 
             // ykbttn
             // 
+            this.ykbttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ykbttn.Location = new System.Drawing.Point(74, 180);
             this.ykbttn.Name = "ykbttn";
-            this.ykbttn.Size = new System.Drawing.Size(75, 23);
+            this.ykbttn.Size = new System.Drawing.Size(97, 32);
             this.ykbttn.TabIndex = 3;
             this.ykbttn.Text = "Ekle";
             this.ykbttn.UseVisualStyleBackColor = true;
             this.ykbttn.Click += new System.EventHandler(this.ykbttn_Click);
             // 
-            // button1
+            // goruntu_btn
             // 
-            this.button1.Location = new System.Drawing.Point(74, 250);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Görüntüleme";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.goruntu_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.goruntu_btn.Location = new System.Drawing.Point(74, 250);
+            this.goruntu_btn.Name = "goruntu_btn";
+            this.goruntu_btn.Size = new System.Drawing.Size(144, 39);
+            this.goruntu_btn.TabIndex = 4;
+            this.goruntu_btn.Text = "Görüntüleme";
+            this.goruntu_btn.UseVisualStyleBackColor = true;
+            this.goruntu_btn.Click += new System.EventHandler(this.goruntu_btn_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(636, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(591, 103);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(594, 329);
+            this.dataGridView1.Size = new System.Drawing.Size(639, 329);
             this.dataGridView1.TabIndex = 5;
             // 
             // yardımk_form
@@ -100,13 +101,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1290, 524);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.goruntu_btn);
             this.Controls.Add(this.ykbttn);
             this.Controls.Add(this.yarktext);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "yardımk_form";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.yardımk_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,7 +121,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox yarktext;
         private System.Windows.Forms.Button ykbttn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button goruntu_btn;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

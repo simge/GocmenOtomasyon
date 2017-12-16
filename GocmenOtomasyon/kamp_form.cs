@@ -21,10 +21,7 @@ namespace GocmenOtomasyon
             InitializeComponent();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+      
         private void kampbtn_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -80,10 +77,6 @@ namespace GocmenOtomasyon
             con.Close();
         }
 
-        private void kamp_cbx_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         public class ComboboxItem
         {
             public string Text { get; set; }
@@ -94,7 +87,7 @@ namespace GocmenOtomasyon
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void gorun_btn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -123,6 +116,14 @@ namespace GocmenOtomasyon
             }
 
         }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void kamp_cbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+ }
 

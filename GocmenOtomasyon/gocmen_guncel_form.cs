@@ -20,31 +20,7 @@ namespace GocmenOtomasyon
         {
             InitializeComponent();
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void soyad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+   
         private void Form2_Load(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection("server = localhost; user id = root; database = gocmenotomasyon");
@@ -53,23 +29,7 @@ namespace GocmenOtomasyon
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
         }
-
-        private void soyad_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guncel_btn_Click(object sender, EventArgs e)
         {
             scb = new MySqlCommandBuilder(sda);
@@ -91,6 +51,40 @@ namespace GocmenOtomasyon
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void soyad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void soyad_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

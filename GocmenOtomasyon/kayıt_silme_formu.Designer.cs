@@ -39,6 +39,7 @@
             // 
             // kurulus_listeleme
             // 
+            this.kurulus_listeleme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kurulus_listeleme.Location = new System.Drawing.Point(993, 238);
             this.kurulus_listeleme.Name = "kurulus_listeleme";
             this.kurulus_listeleme.Size = new System.Drawing.Size(206, 80);
@@ -49,6 +50,7 @@
             // 
             // sehir_listeleme
             // 
+            this.sehir_listeleme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.sehir_listeleme.Location = new System.Drawing.Point(984, 97);
             this.sehir_listeleme.Name = "sehir_listeleme";
             this.sehir_listeleme.Size = new System.Drawing.Size(206, 80);
@@ -59,6 +61,7 @@
             // 
             // ulke_listeleme
             // 
+            this.ulke_listeleme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ulke_listeleme.Location = new System.Drawing.Point(573, 238);
             this.ulke_listeleme.Name = "ulke_listeleme";
             this.ulke_listeleme.Size = new System.Drawing.Size(206, 80);
@@ -69,6 +72,7 @@
             // 
             // meslek_listeleme
             // 
+            this.meslek_listeleme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.meslek_listeleme.Location = new System.Drawing.Point(573, 97);
             this.meslek_listeleme.Name = "meslek_listeleme";
             this.meslek_listeleme.Size = new System.Drawing.Size(206, 80);
@@ -79,6 +83,7 @@
             // 
             // kamp_listeleme
             // 
+            this.kamp_listeleme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kamp_listeleme.Location = new System.Drawing.Point(573, 399);
             this.kamp_listeleme.Name = "kamp_listeleme";
             this.kamp_listeleme.Size = new System.Drawing.Size(206, 80);
@@ -89,6 +94,7 @@
             // 
             // goc_listeleme
             // 
+            this.goc_listeleme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.goc_listeleme.Location = new System.Drawing.Point(134, 238);
             this.goc_listeleme.Name = "goc_listeleme";
             this.goc_listeleme.Size = new System.Drawing.Size(206, 80);
@@ -99,6 +105,7 @@
             // 
             // gocmen_liste
             // 
+            this.gocmen_liste.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gocmen_liste.Location = new System.Drawing.Point(134, 97);
             this.gocmen_liste.Name = "gocmen_liste";
             this.gocmen_liste.Size = new System.Drawing.Size(206, 80);

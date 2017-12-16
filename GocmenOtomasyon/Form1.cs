@@ -12,7 +12,6 @@ namespace GocmenOtomasyon
 {
     public partial class Form1 : Form
     {
-
         
         public Form1()
         {
@@ -22,6 +21,42 @@ namespace GocmenOtomasyon
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+        
+        private void ekle_button_Click(object sender, EventArgs e)
+        {
+            tablolar_ekleme frm = new tablolar_ekleme();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void ara_button_Click(object sender, EventArgs e)
+        {
+            arama_gocmen frm = new arama_gocmen();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void sil_button_Click(object sender, EventArgs e)
+        {
+            kayıt_silme_formu frm = new kayıt_silme_formu();
+            frm.Show();
+            this.Hide();
+
+        }
+
+        private void duzenle_button_Click(object sender, EventArgs e)
+        {
+            guncelleme_form_ekranı frm = new guncelleme_form_ekranı();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void listele_button_Click(object sender, EventArgs e)
+        {
+            listeleme_formu frm = new listeleme_formu(); 
+            frm.Show();
+            this.Hide();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -44,7 +79,7 @@ namespace GocmenOtomasyon
 
         }
 
- 
+
         private void pictureBox4_Click(object sender, EventArgs e)
         {
 
@@ -54,52 +89,6 @@ namespace GocmenOtomasyon
         {
 
         }
-
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            tablolar_ekleme frm = new tablolar_ekleme();
-            frm.Show();
-            this.Hide();
-            // form_ekle.Show();
-            //  this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            arama_gocmen frm = new arama_gocmen();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            kayıt_silme_formu frm = new kayıt_silme_formu();
-
-            frm.Show();
-            this.Hide();
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-           guncelleme_form_ekranı frm = new guncelleme_form_ekranı();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            listeleme_formu frm = new listeleme_formu(); 
-            frm.Show();
-            this.Hide();
-        }
-
-       
-
-      
-
 
     }
 }

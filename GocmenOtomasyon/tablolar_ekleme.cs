@@ -21,7 +21,7 @@ namespace GocmenOtomasyon
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ekle_forms form1 = new ekle_forms();
+            gocmen_ekleme_formu form1 = new gocmen_ekleme_formu();
             form1.Show();
             this.Hide();
         }

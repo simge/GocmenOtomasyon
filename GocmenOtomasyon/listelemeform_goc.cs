@@ -22,11 +22,6 @@ namespace GocmenOtomasyon
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void lst_goc_Click(object sender, EventArgs e)
         {
             try
@@ -54,6 +49,10 @@ namespace GocmenOtomasyon
 
                 MessageBox.Show(ex.Message);
             }
+
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

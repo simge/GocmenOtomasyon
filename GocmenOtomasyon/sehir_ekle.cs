@@ -20,11 +20,6 @@ namespace GocmenOtomasyon
             InitializeComponent();
         }
 
-        private void sehir_tbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void shrekle_bttn_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -79,6 +74,10 @@ namespace GocmenOtomasyon
             }
 
         }
+        private void sehir_tbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+ }
 

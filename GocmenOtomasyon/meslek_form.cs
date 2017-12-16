@@ -22,11 +22,6 @@ namespace GocmenOtomasyon
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void meslekbtn_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -78,6 +73,10 @@ namespace GocmenOtomasyon
             }
 
         }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+ }
 

@@ -67,9 +67,10 @@
             // 
             // shrekle_bttn
             // 
+            this.shrekle_bttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.shrekle_bttn.Location = new System.Drawing.Point(197, 190);
             this.shrekle_bttn.Name = "shrekle_bttn";
-            this.shrekle_bttn.Size = new System.Drawing.Size(75, 23);
+            this.shrekle_bttn.Size = new System.Drawing.Size(107, 33);
             this.shrekle_bttn.TabIndex = 3;
             this.shrekle_bttn.Text = "Ekle";
             this.shrekle_bttn.UseVisualStyleBackColor = true;
@@ -77,9 +78,10 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(197, 259);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 23);
+            this.button1.Size = new System.Drawing.Size(160, 33);
             this.button1.TabIndex = 4;
             this.button1.Text = "Görüntüleme";
             this.button1.UseVisualStyleBackColor = true;

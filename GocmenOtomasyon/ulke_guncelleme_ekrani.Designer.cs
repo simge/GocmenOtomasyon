@@ -44,7 +44,7 @@
             this.label2.Size = new System.Drawing.Size(417, 25);
             this.label2.TabIndex = 52;
             this.label2.Text = "Gelinen Ülke Bilgileri Güncelleme İşlemleri";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+
             // 
             // yenile_btn
             // 

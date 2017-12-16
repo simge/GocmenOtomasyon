@@ -48,9 +48,10 @@
             // 
             // yenile
             // 
-            this.yenile.Location = new System.Drawing.Point(57, 535);
+            this.yenile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yenile.Location = new System.Drawing.Point(56, 495);
             this.yenile.Name = "yenile";
-            this.yenile.Size = new System.Drawing.Size(111, 34);
+            this.yenile.Size = new System.Drawing.Size(142, 34);
             this.yenile.TabIndex = 8;
             this.yenile.Text = "Listeyi Getir";
             this.yenile.UseVisualStyleBackColor = true;
@@ -58,9 +59,10 @@
             // 
             // sil
             // 
-            this.sil.Location = new System.Drawing.Point(57, 495);
+            this.sil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sil.Location = new System.Drawing.Point(57, 454);
             this.sil.Name = "sil";
-            this.sil.Size = new System.Drawing.Size(111, 23);
+            this.sil.Size = new System.Drawing.Size(111, 35);
             this.sil.TabIndex = 7;
             this.sil.Text = "SİL";
             this.sil.UseVisualStyleBackColor = true;
@@ -94,6 +96,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "goc_kayit_silme";
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.goc_kayit_silme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

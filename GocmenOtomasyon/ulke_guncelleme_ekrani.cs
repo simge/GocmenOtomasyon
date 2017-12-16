@@ -30,11 +30,6 @@ namespace GocmenOtomasyon
             dataGridView1.DataSource = dt;
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void yenile_btn_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection("server = localhost; user id = root; database = gocmenotomasyon");

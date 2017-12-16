@@ -56,59 +56,64 @@
             this.baslik.Name = "baslik";
             this.baslik.Size = new System.Drawing.Size(626, 60);
             this.baslik.TabIndex = 0;
-            this.baslik.Text = "GOCMEN OTOMASYON";
+            this.baslik.Text = "GÖÇMEN OTOMASYON";
             this.baslik.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.baslik.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // ekle_button
             // 
-            this.ekle_button.Location = new System.Drawing.Point(153, 333);
+            this.ekle_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ekle_button.Location = new System.Drawing.Point(133, 333);
             this.ekle_button.Name = "ekle_button";
-            this.ekle_button.Size = new System.Drawing.Size(103, 43);
+            this.ekle_button.Size = new System.Drawing.Size(128, 43);
             this.ekle_button.TabIndex = 6;
             this.ekle_button.Text = "Kayıt Ekle";
             this.ekle_button.UseVisualStyleBackColor = true;
-            this.ekle_button.Click += new System.EventHandler(this.button1_Click);
+            this.ekle_button.Click += new System.EventHandler(this.ekle_button_Click);
             // 
             // ara_button
             // 
-            this.ara_button.Location = new System.Drawing.Point(599, 333);
+            this.ara_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ara_button.Location = new System.Drawing.Point(584, 332);
             this.ara_button.Name = "ara_button";
-            this.ara_button.Size = new System.Drawing.Size(87, 43);
+            this.ara_button.Size = new System.Drawing.Size(117, 43);
             this.ara_button.TabIndex = 7;
             this.ara_button.Text = "Kayıt Ara";
             this.ara_button.UseVisualStyleBackColor = true;
-            this.ara_button.Click += new System.EventHandler(this.button2_Click);
+            this.ara_button.Click += new System.EventHandler(this.ara_button_Click);
             // 
             // sil_button
             // 
+            this.sil_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.sil_button.Location = new System.Drawing.Point(992, 333);
             this.sil_button.Name = "sil_button";
-            this.sil_button.Size = new System.Drawing.Size(88, 43);
+            this.sil_button.Size = new System.Drawing.Size(104, 43);
             this.sil_button.TabIndex = 8;
             this.sil_button.Text = "Kayıt Sil";
             this.sil_button.UseVisualStyleBackColor = true;
-            this.sil_button.Click += new System.EventHandler(this.button3_Click);
+            this.sil_button.Click += new System.EventHandler(this.sil_button_Click);
             // 
             // duzenle_button
             // 
+            this.duzenle_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.duzenle_button.Location = new System.Drawing.Point(384, 651);
             this.duzenle_button.Name = "duzenle_button";
-            this.duzenle_button.Size = new System.Drawing.Size(93, 42);
+            this.duzenle_button.Size = new System.Drawing.Size(125, 60);
             this.duzenle_button.TabIndex = 9;
             this.duzenle_button.Text = "Kayıt Güncelle";
             this.duzenle_button.UseVisualStyleBackColor = true;
-            this.duzenle_button.Click += new System.EventHandler(this.button4_Click);
+            this.duzenle_button.Click += new System.EventHandler(this.duzenle_button_Click);
             // 
             // listele_button
             // 
+            this.listele_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listele_button.Location = new System.Drawing.Point(835, 651);
             this.listele_button.Name = "listele_button";
-            this.listele_button.Size = new System.Drawing.Size(91, 42);
+            this.listele_button.Size = new System.Drawing.Size(130, 60);
             this.listele_button.TabIndex = 10;
             this.listele_button.Text = "Kayıt Listele";
             this.listele_button.UseVisualStyleBackColor = true;
-            this.listele_button.Click += new System.EventHandler(this.button5_Click);
+            this.listele_button.Click += new System.EventHandler(this.listele_button_Click);
             // 
             // pictureBox5
             // 

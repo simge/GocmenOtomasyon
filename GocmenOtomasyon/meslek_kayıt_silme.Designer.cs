@@ -48,9 +48,10 @@
             // 
             // yenile
             // 
-            this.yenile.Location = new System.Drawing.Point(60, 531);
+            this.yenile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yenile.Location = new System.Drawing.Point(60, 516);
             this.yenile.Name = "yenile";
-            this.yenile.Size = new System.Drawing.Size(111, 34);
+            this.yenile.Size = new System.Drawing.Size(217, 41);
             this.yenile.TabIndex = 13;
             this.yenile.Text = "Listeyi Getir";
             this.yenile.UseVisualStyleBackColor = true;
@@ -58,9 +59,10 @@
             // 
             // sil
             // 
-            this.sil.Location = new System.Drawing.Point(60, 491);
+            this.sil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sil.Location = new System.Drawing.Point(59, 463);
             this.sil.Name = "sil";
-            this.sil.Size = new System.Drawing.Size(111, 23);
+            this.sil.Size = new System.Drawing.Size(111, 27);
             this.sil.TabIndex = 12;
             this.sil.Text = "SİL";
             this.sil.UseVisualStyleBackColor = true;

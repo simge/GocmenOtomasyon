@@ -1,6 +1,6 @@
 ﻿namespace GocmenOtomasyon
 {
-    partial class ekle_forms
+    partial class gocmen_ekleme_formu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.etiket_basligi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,8 +40,8 @@
             this.cinsiyet = new System.Windows.Forms.TextBox();
             this.egitim_duzeyi = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ekle_btn = new System.Windows.Forms.Button();
+            this.goruntu_btn = new System.Windows.Forms.Button();
             this.goc = new System.Windows.Forms.ComboBox();
             this.ulke = new System.Windows.Forms.ComboBox();
             this.sehiralani = new System.Windows.Forms.ComboBox();
@@ -56,17 +56,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // etiket_basligi
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(137, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(301, 30);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Göçmen Tablosu İşlemleri";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.etiket_basligi.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.etiket_basligi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.etiket_basligi.Location = new System.Drawing.Point(137, 30);
+            this.etiket_basligi.Name = "etiket_basligi";
+            this.etiket_basligi.Size = new System.Drawing.Size(301, 30);
+            this.etiket_basligi.TabIndex = 0;
+            this.etiket_basligi.Text = "Göçmen Tablosu İşlemleri";
+            this.etiket_basligi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.etiket_basligi.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -162,27 +162,27 @@
             this.dataGridView1.Size = new System.Drawing.Size(731, 462);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
+            
             // 
-            // button1
+            // ekle_btn
             // 
-            this.button1.Location = new System.Drawing.Point(153, 514);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Ekle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ekle_btn.Location = new System.Drawing.Point(153, 514);
+            this.ekle_btn.Name = "ekle_btn";
+            this.ekle_btn.Size = new System.Drawing.Size(87, 23);
+            this.ekle_btn.TabIndex = 13;
+            this.ekle_btn.Text = "Ekle";
+            this.ekle_btn.UseVisualStyleBackColor = true;
+            this.ekle_btn.Click += new System.EventHandler(this.ekle_btn_Click);
             // 
-            // button2
+            // goruntu_btn
             // 
-            this.button2.Location = new System.Drawing.Point(35, 514);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Görüntüle";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.goruntu_btn.Location = new System.Drawing.Point(35, 514);
+            this.goruntu_btn.Name = "goruntu_btn";
+            this.goruntu_btn.Size = new System.Drawing.Size(87, 23);
+            this.goruntu_btn.TabIndex = 14;
+            this.goruntu_btn.Text = "Görüntüle";
+            this.goruntu_btn.UseVisualStyleBackColor = true;
+            this.goruntu_btn.Click += new System.EventHandler(this.goruntu_btn_Click);
             // 
             // goc
             // 
@@ -300,8 +300,8 @@
             this.Controls.Add(this.sehiralani);
             this.Controls.Add(this.ulke);
             this.Controls.Add(this.goc);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.goruntu_btn);
+            this.Controls.Add(this.ekle_btn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.egitim_duzeyi);
             this.Controls.Add(this.cinsiyet);
@@ -313,7 +313,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.etiket_basligi);
             this.Name = "ekle_forms";
             this.Text = "Kayıt Ekleme Formu";
             this.Load += new System.EventHandler(this.ekle_forms_Load);
@@ -325,7 +325,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox etiket_basligi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -337,8 +337,8 @@
         private System.Windows.Forms.TextBox cinsiyet;
         private System.Windows.Forms.TextBox egitim_duzeyi;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ekle_btn;
+        private System.Windows.Forms.Button goruntu_btn;
         private System.Windows.Forms.ComboBox goc;
         private System.Windows.Forms.ComboBox ulke;
         private System.Windows.Forms.ComboBox sehiralani;

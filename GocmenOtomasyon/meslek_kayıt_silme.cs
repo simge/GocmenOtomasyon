@@ -23,8 +23,6 @@ namespace GocmenOtomasyon
         private void baglan()
         {
             string bag;
-
-
             MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder(@"server=localhost;user id=root;database=gocmenotomasyon");
 
             bag = build.ToString();
@@ -64,16 +62,10 @@ namespace GocmenOtomasyon
             dataGridView1.DataSource = dt;
             baglan();
         }
-        private void yenile_Click(object sender, EventArgs e)
-        {
-           
-        }
 
         private void yenile_Click_1(object sender, EventArgs e)
         {
             string bag;
-
-
             MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder(@"server=localhost;user id=root;database=gocmenotomasyon");
 
             bag = build.ToString();

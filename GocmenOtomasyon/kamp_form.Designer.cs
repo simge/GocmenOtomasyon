@@ -36,7 +36,7 @@
             this.kampbtn = new System.Windows.Forms.Button();
             this.kamp_cbx = new System.Windows.Forms.ComboBox();
             this.kamptrh = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.gorun_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -91,6 +91,7 @@
             // 
             // kampbtn
             // 
+            this.kampbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kampbtn.Location = new System.Drawing.Point(70, 279);
             this.kampbtn.Name = "kampbtn";
             this.kampbtn.Size = new System.Drawing.Size(104, 38);
@@ -115,20 +116,21 @@
             this.kamptrh.Size = new System.Drawing.Size(200, 22);
             this.kamptrh.TabIndex = 9;
             // 
-            // button1
+            // gorun_btn
             // 
-            this.button1.Location = new System.Drawing.Point(332, 279);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 38);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Görüntüleme";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.gorun_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gorun_btn.Location = new System.Drawing.Point(332, 279);
+            this.gorun_btn.Name = "gorun_btn";
+            this.gorun_btn.Size = new System.Drawing.Size(135, 38);
+            this.gorun_btn.TabIndex = 10;
+            this.gorun_btn.Text = "Görüntüleme";
+            this.gorun_btn.UseVisualStyleBackColor = true;
+            this.gorun_btn.Click += new System.EventHandler(this.gorun_btn_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(665, 109);
+            this.dataGridView1.Location = new System.Drawing.Point(616, 109);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(613, 389);
@@ -151,7 +153,7 @@
             this.ClientSize = new System.Drawing.Size(1290, 510);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.gorun_btn);
             this.Controls.Add(this.kamptrh);
             this.Controls.Add(this.kamp_cbx);
             this.Controls.Add(this.kampbtn);
@@ -179,7 +181,7 @@
         private System.Windows.Forms.Button kampbtn;
         private System.Windows.Forms.ComboBox kamp_cbx;
         private System.Windows.Forms.DateTimePicker kamptrh;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button gorun_btn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
     }

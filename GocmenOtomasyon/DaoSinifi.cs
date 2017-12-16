@@ -173,6 +173,5 @@ namespace GocmenOtomasyon
             connection.Close();
         }
 
-
     }
 }

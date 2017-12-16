@@ -42,10 +42,10 @@
             // goctur
             // 
             this.goctur.AutoSize = true;
-            this.goctur.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.goctur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.goctur.Location = new System.Drawing.Point(78, 93);
             this.goctur.Name = "goctur";
-            this.goctur.Size = new System.Drawing.Size(76, 17);
+            this.goctur.Size = new System.Drawing.Size(87, 20);
             this.goctur.TabIndex = 0;
             this.goctur.Text = "Göç Türü";
             this.goctur.Click += new System.EventHandler(this.label1_Click);
@@ -53,10 +53,10 @@
             // goctarihi
             // 
             this.goctarihi.AutoSize = true;
-            this.goctarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.goctarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.goctarihi.Location = new System.Drawing.Point(78, 149);
             this.goctarihi.Name = "goctarihi";
-            this.goctarihi.Size = new System.Drawing.Size(80, 17);
+            this.goctarihi.Size = new System.Drawing.Size(92, 20);
             this.goctarihi.TabIndex = 2;
             this.goctarihi.Text = "Göç Tarih";
             this.goctarihi.Click += new System.EventHandler(this.goctarihi_Click);
@@ -72,17 +72,17 @@
             // goclabel
             // 
             this.goclabel.AutoSize = true;
-            this.goclabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.goclabel.Location = new System.Drawing.Point(548, 35);
+            this.goclabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.goclabel.Location = new System.Drawing.Point(507, 26);
             this.goclabel.Name = "goclabel";
-            this.goclabel.Size = new System.Drawing.Size(50, 20);
+            this.goclabel.Size = new System.Drawing.Size(82, 32);
             this.goclabel.TabIndex = 4;
             this.goclabel.Text = "GÖÇ";
             this.goclabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // goc_trh
             // 
-            this.goc_trh.Location = new System.Drawing.Point(279, 143);
+            this.goc_trh.Location = new System.Drawing.Point(279, 149);
             this.goc_trh.Name = "goc_trh";
             this.goc_trh.Size = new System.Drawing.Size(200, 22);
             this.goc_trh.TabIndex = 5;
@@ -90,9 +90,10 @@
             // 
             // ekleme_button
             // 
+            this.ekleme_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ekleme_button.Location = new System.Drawing.Point(279, 237);
             this.ekleme_button.Name = "ekleme_button";
-            this.ekleme_button.Size = new System.Drawing.Size(97, 23);
+            this.ekleme_button.Size = new System.Drawing.Size(111, 34);
             this.ekleme_button.TabIndex = 6;
             this.ekleme_button.Text = "Ekle";
             this.ekleme_button.UseVisualStyleBackColor = true;
@@ -100,9 +101,10 @@
             // 
             // goc_goruntu
             // 
+            this.goc_goruntu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.goc_goruntu.Location = new System.Drawing.Point(279, 305);
             this.goc_goruntu.Name = "goc_goruntu";
-            this.goc_goruntu.Size = new System.Drawing.Size(97, 23);
+            this.goc_goruntu.Size = new System.Drawing.Size(111, 31);
             this.goc_goruntu.TabIndex = 7;
             this.goc_goruntu.Text = "Görüntüle";
             this.goc_goruntu.UseVisualStyleBackColor = true;
@@ -111,7 +113,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(633, 88);
+            this.dataGridView1.Location = new System.Drawing.Point(554, 88);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(653, 326);
