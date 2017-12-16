@@ -66,6 +66,7 @@
     <Compile Include="arama_gocmen.Designer.cs">
       <DependentUpon>arama_gocmen.cs</DependentUpon>
     </Compile>
+    <Compile Include="DaoSinifi.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +78,18 @@
     </Compile>
     <Compile Include="ekle_forms.Designer.cs">
       <DependentUpon>ekle_forms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kayıt_silmeform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kayıt_silmeform.Designer.cs">
+      <DependentUpon>kayıt_silmeform.cs</DependentUpon>
     </Compile>
     <Compile Include="listelemeform_kamp.cs">
       <SubType>Form</SubType>
@@ -178,6 +191,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kayıt_silmeform.resx">
+      <DependentUpon>kayıt_silmeform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="listelemeform_kamp.resx">
       <DependentUpon>listelemeform_kamp.cs</DependentUpon>
