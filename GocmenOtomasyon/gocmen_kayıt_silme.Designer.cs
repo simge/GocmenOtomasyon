@@ -1,6 +1,6 @@
 ﻿namespace GocmenOtomasyon
 {
-    partial class kayıt_silmeform
+    partial class gocmen_kayıt_silme
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,7 @@
             this.giristxb = new System.Windows.Forms.TextBox();
             this.sil = new System.Windows.Forms.Button();
             this.yenile = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,14 +48,14 @@
             // 
             // giristxb
             // 
-            this.giristxb.Location = new System.Drawing.Point(29, 351);
+            this.giristxb.Location = new System.Drawing.Point(29, 409);
             this.giristxb.Name = "giristxb";
             this.giristxb.Size = new System.Drawing.Size(164, 22);
             this.giristxb.TabIndex = 1;
             // 
             // sil
             // 
-            this.sil.Location = new System.Drawing.Point(29, 396);
+            this.sil.Location = new System.Drawing.Point(30, 488);
             this.sil.Name = "sil";
             this.sil.Size = new System.Drawing.Size(111, 23);
             this.sil.TabIndex = 2;
@@ -64,7 +65,7 @@
             // 
             // yenile
             // 
-            this.yenile.Location = new System.Drawing.Point(197, 396);
+            this.yenile.Location = new System.Drawing.Point(30, 528);
             this.yenile.Name = "yenile";
             this.yenile.Size = new System.Drawing.Size(111, 34);
             this.yenile.TabIndex = 3;
@@ -72,16 +73,27 @@
             this.yenile.UseVisualStyleBackColor = true;
             this.yenile.Click += new System.EventHandler(this.yenile_Click);
             // 
-            // kayıt_silmeform
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(26, 357);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(320, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Silinmesini istediğiniz kaydın idsini giriniz.";
+            // 
+            // gocmen_kayıt_silme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1318, 574);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.yenile);
             this.Controls.Add(this.sil);
             this.Controls.Add(this.giristxb);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "kayıt_silmeform";
+            this.Name = "gocmen_kayıt_silme";
             this.Text = "kayıt_silmeform";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -95,5 +107,6 @@
         private System.Windows.Forms.TextBox giristxb;
         private System.Windows.Forms.Button sil;
         private System.Windows.Forms.Button yenile;
+        private System.Windows.Forms.Label label1;
     }
 }

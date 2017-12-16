@@ -85,11 +85,35 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="kayıt_silmeform.cs">
+    <Compile Include="kamp_silme_formu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="kayıt_silmeform.Designer.cs">
-      <DependentUpon>kayıt_silmeform.cs</DependentUpon>
+    <Compile Include="kamp_silme_formu.Designer.cs">
+      <DependentUpon>kamp_silme_formu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="meslek_kayıt_silme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="meslek_kayıt_silme.Designer.cs">
+      <DependentUpon>meslek_kayıt_silme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goc_kayit_silme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goc_kayit_silme.Designer.cs">
+      <DependentUpon>goc_kayit_silme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gocmen_kayıt_silme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gocmen_kayıt_silme.Designer.cs">
+      <DependentUpon>gocmen_kayıt_silme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kayıt_silme_formu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kayıt_silme_formu.Designer.cs">
+      <DependentUpon>kayıt_silme_formu.cs</DependentUpon>
     </Compile>
     <Compile Include="listelemeform_kamp.cs">
       <SubType>Form</SubType>
@@ -139,6 +163,18 @@
     <Compile Include="listeleme_formu.Designer.cs">
       <DependentUpon>listeleme_formu.cs</DependentUpon>
     </Compile>
+    <Compile Include="sehir_silme_formu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sehir_silme_formu.Designer.cs">
+      <DependentUpon>sehir_silme_formu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ulke_silme_formu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ulke_silme_formu.Designer.cs">
+      <DependentUpon>ulke_silme_formu.cs</DependentUpon>
+    </Compile>
     <Compile Include="yardımk_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +219,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="yardımk_silme_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yardımk_silme_form.Designer.cs">
+      <DependentUpon>yardımk_silme_form.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="arama_gocmen.resx">
       <DependentUpon>arama_gocmen.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,8 +237,20 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="kayıt_silmeform.resx">
-      <DependentUpon>kayıt_silmeform.cs</DependentUpon>
+    <EmbeddedResource Include="kamp_silme_formu.resx">
+      <DependentUpon>kamp_silme_formu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="meslek_kayıt_silme.resx">
+      <DependentUpon>meslek_kayıt_silme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goc_kayit_silme.resx">
+      <DependentUpon>goc_kayit_silme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gocmen_kayıt_silme.resx">
+      <DependentUpon>gocmen_kayıt_silme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kayıt_silme_formu.resx">
+      <DependentUpon>kayıt_silme_formu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="listelemeform_kamp.resx">
       <DependentUpon>listelemeform_kamp.cs</DependentUpon>
@@ -221,6 +275,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="listeleme_formu.resx">
       <DependentUpon>listeleme_formu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sehir_silme_formu.resx">
+      <DependentUpon>sehir_silme_formu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ulke_silme_formu.resx">
+      <DependentUpon>ulke_silme_formu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="yardımk_form.resx">
       <DependentUpon>yardımk_form.cs</DependentUpon>
@@ -253,6 +313,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="yardımk_silme_form.resx">
+      <DependentUpon>yardımk_silme_form.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

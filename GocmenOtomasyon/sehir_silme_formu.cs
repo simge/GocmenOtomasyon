@@ -12,25 +12,24 @@ using MySql.Data.MySqlClient;
 
 namespace GocmenOtomasyon
 {
-    public partial class kayıt_silmeform : Form
+    public partial class sehir_silme_formu : Form
     {
         MySqlConnection baglanti;
-        public kayıt_silmeform()
+        public sehir_silme_formu()
         {
             InitializeComponent();
         }
-
         private void baglan()
         {
             string bag;
 
-            
+
             MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder(@"server=localhost;user id=root;database=gocmenotomasyon");
-           
+
             bag = build.ToString();
             baglanti = new MySqlConnection(bag);
 
-            string sql = "SELECT * FROM tbl_gocmen";
+            string sql = "SELECT * FROM tbl_kaldigi_sehir";
             DataTable dt = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
@@ -43,17 +42,6 @@ namespace GocmenOtomasyon
             dataGridView1.DataSource = dt;
         }
 
-       
-
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void kayıt_silmeform_Load(object sender, EventArgs e)
-        {
-            baglan();
-        }
 
         private void sil_Click(object sender, EventArgs e)
         {
@@ -61,7 +49,7 @@ namespace GocmenOtomasyon
             MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder(@"server=localhost;user id=root;database=gocmenotomasyon");
             bag = build.ToString();
             baglanti = new MySqlConnection(bag);
-            string sql = "DELETE FROM tbl_gocmen WHERE gocmen_id=  '" + giristxb.Text + "'";
+            string sql = "DELETE FROM tbl_kaldigi_sehir WHERE sehir_id=  '" + giristxb.Text + "'";
             DataTable dt = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
@@ -87,7 +75,7 @@ namespace GocmenOtomasyon
             bag = build.ToString();
             baglanti = new MySqlConnection(bag);
 
-            string sql = "SELECT * FROM tbl_gocmen";
+            string sql = "SELECT * FROM tbl_meslek";
             DataTable dt = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
@@ -99,5 +87,5 @@ namespace GocmenOtomasyon
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
         }
-    }   
+    }
 }

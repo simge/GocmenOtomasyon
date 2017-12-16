@@ -75,7 +75,7 @@ namespace GocmenOtomasyon
 
         private void button3_Click(object sender, EventArgs e)
         {
-            kayıt_silmeform frm = new kayıt_silmeform();
+            kayıt_silme_formu frm = new kayıt_silme_formu();
 
             frm.Show();
             this.Hide();
