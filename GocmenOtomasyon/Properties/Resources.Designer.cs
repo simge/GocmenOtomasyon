@@ -163,6 +163,16 @@ namespace GocmenOtomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap kilit {
+            get {
+                object obj = ResourceManager.GetObject("kilit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap listeeeee {
             get {
                 object obj = ResourceManager.GetObject("listeeeee", resourceCulture);

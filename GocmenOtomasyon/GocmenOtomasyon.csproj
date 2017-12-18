@@ -91,6 +91,12 @@
     <Compile Include="kamp_guncelleme_ekrani.Designer.cs">
       <DependentUpon>kamp_guncelleme_ekrani.cs</DependentUpon>
     </Compile>
+    <Compile Include="kullanici_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullanici_giris.Designer.cs">
+      <DependentUpon>kullanici_giris.cs</DependentUpon>
+    </Compile>
     <Compile Include="meslek_guncelleme_ekrani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +294,9 @@
     <EmbeddedResource Include="kamp_guncelleme_ekrani.resx">
       <DependentUpon>kamp_guncelleme_ekrani.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="kullanici_giris.resx">
+      <DependentUpon>kullanici_giris.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="meslek_guncelleme_ekrani.resx">
       <DependentUpon>meslek_guncelleme_ekrani.cs</DependentUpon>
     </EmbeddedResource>
@@ -448,6 +457,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kilit.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

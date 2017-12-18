@@ -16,8 +16,8 @@ namespace GocmenOtomasyon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-            Application.Run(new gocmen_ekleme_formu());
+            Application.Run(new kullanici_giris());
+            
 
         }
     }
