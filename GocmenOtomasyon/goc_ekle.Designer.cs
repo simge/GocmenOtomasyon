@@ -106,7 +106,7 @@
             this.goc_goruntu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.goc_goruntu.Location = new System.Drawing.Point(279, 305);
             this.goc_goruntu.Name = "goc_goruntu";
-            this.goc_goruntu.Size = new System.Drawing.Size(122, 31);
+            this.goc_goruntu.Size = new System.Drawing.Size(140, 31);
             this.goc_goruntu.TabIndex = 7;
             this.goc_goruntu.Text = "Görüntüle";
             this.goc_goruntu.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(554, 88);
+            this.dataGridView1.Location = new System.Drawing.Point(700, 88);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(653, 326);
@@ -138,7 +138,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(1298, 545);
+            this.ClientSize = new System.Drawing.Size(1442, 545);
             this.Controls.Add(this.geri_btn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.goc_goruntu);

@@ -44,21 +44,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(91, 110);
+            this.label1.Location = new System.Drawing.Point(91, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 24);
+            this.label1.Size = new System.Drawing.Size(89, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "kamp_id";
+            this.label1.Text = "Kamp adı";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(92, 153);
+            this.label2.Location = new System.Drawing.Point(91, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 24);
+            this.label2.Size = new System.Drawing.Size(138, 24);
             this.label2.TabIndex = 1;
-            this.label2.Text = "yk_id(yardım kuruluş id)";
+            this.label2.Text = "Yardım Kuruluş";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3

@@ -71,7 +71,7 @@ namespace GocmenOtomasyon
             bag = build.ToString();
             baglanti = new MySqlConnection(bag);
 
-            string sql = "SELECT * FROM tbl_meslek";
+            string sql = "SELECT * FROM tbl_kaldigi_sehir";
             DataTable dt = new DataTable();
             MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
