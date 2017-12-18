@@ -41,7 +41,19 @@ namespace GocmenOtomasyon
             }
             con.Close();
         }
-
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                //karakteri göster.
+                passw.PasswordChar = '\0';
+            }
+            //değilse karakterlerin yerine * koy.
+            else
+            {
+                passw.PasswordChar = '*';
+            }
+        }
         private void passw_TextChanged(object sender, EventArgs e)
         {
 
@@ -56,5 +68,7 @@ namespace GocmenOtomasyon
         {
 
         }
+
+        
     }
 }
