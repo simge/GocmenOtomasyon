@@ -79,7 +79,9 @@ namespace GocmenOtomasyon
 
         private void kk_btn_Click(object sender, EventArgs e)
         {
-
+            baglanti_tablosu frm = new baglanti_tablosu();
+            frm.Show();
+            this.Hide();
         }
     }
 }

@@ -95,6 +95,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.ara_txb);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "arama_gocmen";
             this.Text = "arama_gocmen";
             this.Load += new System.EventHandler(this.arama_gocmen_Load_1);

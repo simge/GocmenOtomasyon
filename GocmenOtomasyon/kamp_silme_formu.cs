@@ -50,7 +50,7 @@ namespace GocmenOtomasyon
             baglanti = new MySqlConnection(bag);
             string sql = "DELETE FROM tbl_kamp WHERE kamp_id=  '" + giristxb.Text + "'";
             DataTable dt = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
 
             command.CommandText = sql;
@@ -74,7 +74,7 @@ namespace GocmenOtomasyon
 
             string sql = "SELECT * FROM tbl_kamp";
             DataTable dt = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
 
             command.CommandText = sql;

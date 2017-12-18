@@ -91,13 +91,14 @@
             // 
             // ekleme_button
             // 
+            this.ekleme_button.BackColor = System.Drawing.SystemColors.Window;
             this.ekleme_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ekleme_button.Location = new System.Drawing.Point(279, 237);
             this.ekleme_button.Name = "ekleme_button";
             this.ekleme_button.Size = new System.Drawing.Size(111, 34);
             this.ekleme_button.TabIndex = 6;
             this.ekleme_button.Text = "Ekle";
-            this.ekleme_button.UseVisualStyleBackColor = true;
+            this.ekleme_button.UseVisualStyleBackColor = false;
             this.ekleme_button.Click += new System.EventHandler(this.ekleme_button_Click);
             // 
             // goc_goruntu
@@ -105,7 +106,7 @@
             this.goc_goruntu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.goc_goruntu.Location = new System.Drawing.Point(279, 305);
             this.goc_goruntu.Name = "goc_goruntu";
-            this.goc_goruntu.Size = new System.Drawing.Size(111, 31);
+            this.goc_goruntu.Size = new System.Drawing.Size(122, 31);
             this.goc_goruntu.TabIndex = 7;
             this.goc_goruntu.Text = "Görüntüle";
             this.goc_goruntu.UseVisualStyleBackColor = true;
@@ -136,6 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1298, 545);
             this.Controls.Add(this.geri_btn);
             this.Controls.Add(this.dataGridView1);
@@ -148,6 +150,7 @@
             this.Controls.Add(this.goctur);
             this.Name = "goc_ekle";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.goc_ekle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

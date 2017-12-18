@@ -24,12 +24,12 @@ namespace GocmenOtomasyon
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
-                string Query = "select * from  tbl_yardim_kurulus ";
+                string Query = "SELECT * FROM  tbl_yardim_kurulus ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
                 MyConn2.Open();
-                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                MySqlDataAdapter MyAdapter = DaoClass.GetMySqlDataAdapter();
                 MyAdapter.SelectCommand = MyCommand2;
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
@@ -43,13 +43,18 @@ namespace GocmenOtomasyon
 
                 MessageBox.Show(ex.Message);
             }
+            MySqlConnection con1 = DaoClass.GetMySqlConnection();
+            con1.Open();
+            string query = "SELECT COUNT(yk_id) FROM tbl_yardim_kurulus";
+            MySqlCommand command = new MySqlCommand(query, con1);
+            MySqlDataReader dr = command.ExecuteReader();
+            while (dr.Read())
+            {
+                sayici.Text = dr.GetString(0);
+            }
+
+            con1.Close();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             listelemeform_yardımk formkapa = new listelemeform_yardımk();
@@ -58,5 +63,12 @@ namespace GocmenOtomasyon
             form.Show();
             this.Hide();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+       
     }
 }

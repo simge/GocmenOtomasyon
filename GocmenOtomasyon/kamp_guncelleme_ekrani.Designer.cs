@@ -79,9 +79,9 @@
             // 
             // don_btn
             // 
-            this.don_btn.Location = new System.Drawing.Point(12, 491);
+            this.don_btn.Location = new System.Drawing.Point(9, 473);
             this.don_btn.Name = "don_btn";
-            this.don_btn.Size = new System.Drawing.Size(75, 31);
+            this.don_btn.Size = new System.Drawing.Size(91, 31);
             this.don_btn.TabIndex = 53;
             this.don_btn.Text = "Geri";
             this.don_btn.UseVisualStyleBackColor = true;
@@ -91,6 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1335, 547);
             this.Controls.Add(this.don_btn);
             this.Controls.Add(this.label2);

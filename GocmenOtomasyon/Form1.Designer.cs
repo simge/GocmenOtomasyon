@@ -49,8 +49,9 @@
             // 
             // baslik
             // 
-            this.baslik.BackColor = System.Drawing.SystemColors.Window;
+            this.baslik.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.baslik.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.baslik.ForeColor = System.Drawing.SystemColors.WindowText;
             this.baslik.Location = new System.Drawing.Point(329, 2);
             this.baslik.Multiline = true;
             this.baslik.Name = "baslik";
@@ -168,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1369, 723);
             this.Controls.Add(this.pictureBox5);

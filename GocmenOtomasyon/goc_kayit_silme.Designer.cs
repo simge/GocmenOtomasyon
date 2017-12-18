@@ -87,8 +87,8 @@
             // 
             // don_btn
             // 
-            this.don_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.don_btn.Location = new System.Drawing.Point(1144, 407);
+            this.don_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.don_btn.Location = new System.Drawing.Point(1135, 364);
             this.don_btn.Name = "don_btn";
             this.don_btn.Size = new System.Drawing.Size(131, 31);
             this.don_btn.TabIndex = 10;
@@ -100,6 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1319, 588);
             this.Controls.Add(this.don_btn);
             this.Controls.Add(this.label1);

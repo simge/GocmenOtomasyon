@@ -98,8 +98,8 @@
             // 
             // don_btn
             // 
-            this.don_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.don_btn.Location = new System.Drawing.Point(1068, 400);
+            this.don_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.don_btn.Location = new System.Drawing.Point(1111, 379);
             this.don_btn.Name = "don_btn";
             this.don_btn.Size = new System.Drawing.Size(129, 31);
             this.don_btn.TabIndex = 6;

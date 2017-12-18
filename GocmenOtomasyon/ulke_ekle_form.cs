@@ -15,7 +15,7 @@ namespace GocmenOtomasyon
     public partial class ulke_ekle_form : Form
         
     {
-        MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=gocmenotomasyon");
+        MySqlConnection con = DaoClass.GetMySqlConnection();
         private MySqlDataReader dr;
         public ulke_ekle_form()
         {
@@ -29,7 +29,7 @@ namespace GocmenOtomasyon
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "insert into tbl_gocmen_ulkesi(ulke_ad,ulke_uyruk)values('" + ulkead.Text + "','" + ulkeuyruk.Text + "')";
+            cmd.CommandText = "INSERT INTO tbl_gocmen_ulkesi(ulke_ad,ulke_uyruk)values('" + ulkead.Text + "','" + ulkeuyruk.Text + "')";
             cmd.ExecuteNonQuery();
             if (ulkead is TextBox)
             {
@@ -51,13 +51,13 @@ namespace GocmenOtomasyon
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
-                string Query = "select * from  tbl_gocmen_ulkesi ";
+                string Query = "SELECT * FROM  tbl_gocmen_ulkesi ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
                 MyConn2.Open();
 
-                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                MySqlDataAdapter MyAdapter = DaoClass.GetMySqlDataAdapter();
                 MyAdapter.SelectCommand = MyCommand2;
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
@@ -83,13 +83,13 @@ namespace GocmenOtomasyon
         private void ulke_ekle_form_Load(object sender, EventArgs e)
         {
             string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
-            string Query = "select * from  tbl_gocmen_ulkesi ";
+            string Query = "SELECT * FROM  tbl_gocmen_ulkesi ";
             MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
             MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
             MyConn2.Open();
 
-            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+            MySqlDataAdapter MyAdapter = DaoClass.GetMySqlDataAdapter();
             MyAdapter.SelectCommand = MyCommand2;
             DataTable dTable = new DataTable();
             MyAdapter.Fill(dTable);

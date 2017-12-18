@@ -16,7 +16,7 @@ namespace GocmenOtomasyon
 
        
     {
-        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=gocmenotomasyon");
+        MySqlConnection con = DaoClass.GetMySqlConnection();
         MySqlCommand command;
         MySqlDataAdapter adapter;
         DataTable table;
@@ -26,7 +26,6 @@ namespace GocmenOtomasyon
         }
         private void arama_gocmen_Load_1(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("server = localhost; user id = root; database = gocmenotomasyon");
             adapter = new MySqlDataAdapter(@"SELECT `gocmen_id`, `goc_id`, `ulke_id`, `sehir_id`, `kamp_id`, `meslek_id`, `gocmen_ad`, `gocmen_soyad`, `gocmen_yas`, `gocmen_cinsiyet`, `gocmen_egitim_duzeyi` FROM `tbl_gocmen`", con);
             table = new DataTable();
             adapter.Fill(table);
@@ -35,13 +34,21 @@ namespace GocmenOtomasyon
         
         public void searchData(string valueToSearch)
         {
-            string query = "select *from tbl_gocmen where CONCAT( `gocmen_id`, `goc_id`, `ulke_id`, `sehir_id`, `kamp_id`, `meslek_id`, `gocmen_ad`, `gocmen_soyad`, `gocmen_yas`, `gocmen_cinsiyet`, `gocmen_egitim_duzeyi`) like'%"+valueToSearch+ "%' ";
+            string query = "SELECT *FROM tbl_gocmen WHERE CONCAT( `gocmen_id`, `goc_id`, `ulke_id`, `sehir_id`, `kamp_id`, `meslek_id`, `gocmen_ad`, `gocmen_soyad`, `gocmen_yas`, `gocmen_cinsiyet`, `gocmen_egitim_duzeyi`) like'%"+valueToSearch+ "%' ";
             command = new MySqlCommand(query, con);
             adapter = new MySqlDataAdapter(command);
             table = new DataTable();
             adapter.Fill(table);
             dataGridView1.DataSource = table;
             
+        }
+        private void don_btn_Click(object sender, EventArgs e)
+        {
+            arama_gocmen formkapa = new arama_gocmen();
+            formkapa.Close();
+            Form1 form = new Form1();
+            form.Show();
+            this.Hide();
         }
 
         private void ara_btn_Click(object sender, EventArgs e)
@@ -64,15 +71,6 @@ namespace GocmenOtomasyon
         private void label1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void don_btn_Click(object sender, EventArgs e)
-        {
-            arama_gocmen formkapa = new arama_gocmen();
-            formkapa.Close();
-            Form1 form = new Form1();
-            form.Show();
-            this.Hide();
         }
     }
 }

@@ -16,21 +16,21 @@ namespace GocmenOtomasyon
     public partial class goc_ekle : Form
 
     {
-        MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=gocmenotomasyon");
-        private MySqlDataReader dr;
-
+ 
         public goc_ekle()
         {
             InitializeComponent();
+            
         }
 
         private void ekleme_button_Click(object sender, EventArgs e)
         {
+            MySqlConnection con =  DaoClass.GetMySqlConnection();
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "insert into tbl_goc(goc_tur,goc_trh)values('" + goc_tur.Text + "','" + goc_trh.Text + "')";
+            cmd.CommandText = "INSERT INTO tbl_goc(goc_tur,goc_trh)VALUES('" + goc_tur.Text + "','" + goc_trh.Text + "')";
             cmd.ExecuteNonQuery();
             if (goc_tur is TextBox)
             {
@@ -51,17 +51,16 @@ namespace GocmenOtomasyon
         {
             try
             {
-                string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
-                string Query = "select * from  tbl_goc ";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
-                MyConn2.Open();
-                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
-                MyAdapter.SelectCommand = MyCommand2;
+                string Query = "SELECT * FROM  tbl_goc ";
+                MySqlConnection con = DaoClass.GetMySqlConnection();
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, con);
+                con.Open();
+                MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
+                adapter.SelectCommand = MyCommand2;
                 DataTable dTable = new DataTable();
-                MyAdapter.Fill(dTable);
+                adapter.Fill(dTable);
                 dataGridView1.DataSource = dTable; 
-                MyConn2.Close();
+                con.Close();
             }
             catch (Exception ex)
             {
@@ -69,6 +68,20 @@ namespace GocmenOtomasyon
                 MessageBox.Show(ex.Message);
             }
 
+           
+
+        }
+        private void geri_btn_Click(object sender, EventArgs e)
+        {
+            goc_ekle formkapa = new goc_ekle();
+            formkapa.Close();
+            tablolar_ekleme form = new tablolar_ekleme();
+            form.Show();
+            this.Hide();
+        }
+        private void goc_ekle_Load(object sender, EventArgs e)
+        {
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -105,14 +118,12 @@ namespace GocmenOtomasyon
 
         }
 
-        private void geri_btn_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-            goc_ekle formkapa = new goc_ekle();
-            formkapa.Close();
-            tablolar_ekleme form = new tablolar_ekleme();
-            form.Show();
-            this.Hide();
+           
         }
+
+      
     }
 }
 

@@ -90,10 +90,10 @@
             // 
             // don_btn
             // 
-            this.don_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.don_btn.Location = new System.Drawing.Point(12, 478);
+            this.don_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.don_btn.Location = new System.Drawing.Point(12, 484);
             this.don_btn.Name = "don_btn";
-            this.don_btn.Size = new System.Drawing.Size(118, 52);
+            this.don_btn.Size = new System.Drawing.Size(103, 28);
             this.don_btn.TabIndex = 45;
             this.don_btn.Text = "Geri";
             this.don_btn.UseVisualStyleBackColor = true;
@@ -103,6 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1340, 570);
             this.Controls.Add(this.don_btn);
             this.Controls.Add(this.label2);

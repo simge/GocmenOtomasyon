@@ -54,6 +54,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.don_btn = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.sayici = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -286,7 +288,7 @@
             // 
             // don_btn
             // 
-            this.don_btn.Location = new System.Drawing.Point(1208, 514);
+            this.don_btn.Location = new System.Drawing.Point(302, 514);
             this.don_btn.Name = "don_btn";
             this.don_btn.Size = new System.Drawing.Size(75, 23);
             this.don_btn.TabIndex = 30;
@@ -294,11 +296,31 @@
             this.don_btn.UseVisualStyleBackColor = true;
             this.don_btn.Click += new System.EventHandler(this.don_btn_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(1035, 511);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(176, 20);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Toplam göçmen sayısı";
+            // 
+            // sayici
+            // 
+            this.sayici.Location = new System.Drawing.Point(1237, 509);
+            this.sayici.Name = "sayici";
+            this.sayici.Size = new System.Drawing.Size(100, 22);
+            this.sayici.TabIndex = 32;
+            // 
             // gocmen_ekleme_formu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1417, 712);
+            this.Controls.Add(this.sayici);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.don_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
@@ -362,5 +384,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button don_btn;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox sayici;
     }
 }

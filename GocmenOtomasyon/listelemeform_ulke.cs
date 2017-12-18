@@ -13,7 +13,7 @@ namespace GocmenOtomasyon
 {
     public partial class listelemeform_ulke : Form
     {
-        MySqlConnection con = new MySqlConnection();
+        MySqlConnection con = DaoClass.GetMySqlConnection();
         public listelemeform_ulke()
         {
             InitializeComponent();
@@ -24,13 +24,13 @@ namespace GocmenOtomasyon
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
-                string Query = "select * from  tbl_gocmen_ulkesi ";
+                string Query = "SELECT * FROM  tbl_gocmen_ulkesi ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
                 MyConn2.Open();
 
-                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                MySqlDataAdapter MyAdapter = DaoClass.GetMySqlDataAdapter();
                 MyAdapter.SelectCommand = MyCommand2;
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
@@ -45,12 +45,18 @@ namespace GocmenOtomasyon
 
                 MessageBox.Show(ex.Message);
             }
-        }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            MySqlConnection con1 = DaoClass.GetMySqlConnection();
+            con1.Open();
+            string query = "SELECT COUNT(ulke_id) FROM tbl_gocmen_ulkesi";
+            MySqlCommand command = new MySqlCommand(query, con1);
+            MySqlDataReader dr = command.ExecuteReader();
+            while (dr.Read())
+            {
+                sayici.Text = dr.GetString(0);
+            }
 
+            con1.Close();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             listelemeform_ulke formkapa = new listelemeform_ulke();
@@ -59,5 +65,12 @@ namespace GocmenOtomasyon
             form.Show();
             this.Hide();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+       
     }
 }

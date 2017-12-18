@@ -24,7 +24,7 @@ namespace GocmenOtomasyon
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("server = localhost; user id = root; database = gocmenotomasyon");
+            MySqlConnection con = DaoClass.GetMySqlConnection();
             sda = new MySqlDataAdapter(@"SELECT `meslek_id`, `meslek_ad` FROM `tbl_meslek`", con);
             dt = new DataTable();
             sda.Fill(dt);
@@ -33,7 +33,7 @@ namespace GocmenOtomasyon
 
         private void yenile_btn_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("server = localhost; user id = root; database = gocmenotomasyon");
+            MySqlConnection con = DaoClass.GetMySqlConnection();
             sda = new MySqlDataAdapter(@"SELECT `meslek_id`, `meslek_ad` FROM `tbl_meslek`", con);
             dt = new DataTable();
             sda.Fill(dt);

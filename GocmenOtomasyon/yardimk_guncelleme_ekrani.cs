@@ -24,7 +24,7 @@ namespace GocmenOtomasyon
 
         private void yenile_btn_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("server = localhost; user id = root; database = gocmenotomasyon");
+            MySqlConnection con = DaoClass.GetMySqlConnection();
             sda = new MySqlDataAdapter(@"SELECT `yk_id`, `yk_ad` FROM `tbl_yardim_kurulus`", con);
             dt = new DataTable();
             sda.Fill(dt);
@@ -33,7 +33,7 @@ namespace GocmenOtomasyon
 
         private void yardimk_guncelleme_ekrani_Load(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("server = localhost; user id = root; database = gocmenotomasyon");
+            MySqlConnection con = DaoClass.GetMySqlConnection();
             sda = new MySqlDataAdapter(@"SELECT `yk_id`, `yk_ad` FROM `tbl_yardim_kurulus`", con);
             dt = new DataTable();
             sda.Fill(dt);

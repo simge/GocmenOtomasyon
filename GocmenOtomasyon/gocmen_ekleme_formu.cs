@@ -15,7 +15,7 @@ namespace GocmenOtomasyon
     public partial class gocmen_ekleme_formu : Form
     {
 
-        MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=gocmenotomasyon");
+        MySqlConnection con = DaoClass.GetMySqlConnection();
         private MySqlDataReader dr;
         private MySqlDataReader dr1;
         private MySqlDataReader dr2;
@@ -50,7 +50,7 @@ namespace GocmenOtomasyon
             string meslekalani_value = meslekalaniitem.Value.ToString();
 
 
-            cmd.CommandText = "insert into tbl_gocmen (goc_id, ulke_id, sehir_id, kamp_id, meslek_id, gocmen_ad, gocmen_soyad, gocmen_yas, gocmen_cinsiyet, gocmen_egitim_duzeyi )values('" + Int32.Parse(goc_value) + "', '" + Int32.Parse(ulke_value) + "', '" + Int32.Parse(sehiralani_value) + "', '" + Int32.Parse(kampalani_value) + "','" + Int32.Parse(meslekalani_value) + "', '" + ad.Text+"', '"+soyad.Text+ "', '" + yas.Text + "', '" + cinsiyet.Text + "','" + egitim_duzeyi.Text + "')";
+            cmd.CommandText = "INSERT INTO tbl_gocmen (goc_id, ulke_id, sehir_id, kamp_id, meslek_id, gocmen_ad, gocmen_soyad, gocmen_yas, gocmen_cinsiyet, gocmen_egitim_duzeyi )values('" + Int32.Parse(goc_value) + "', '" + Int32.Parse(ulke_value) + "', '" + Int32.Parse(sehiralani_value) + "', '" + Int32.Parse(kampalani_value) + "','" + Int32.Parse(meslekalani_value) + "', '" + ad.Text+"', '"+soyad.Text+ "', '" + yas.Text + "', '" + cinsiyet.Text + "','" + egitim_duzeyi.Text + "')";
             cmd.ExecuteNonQuery();
             MessageBox.Show("İşlem veritabanında kaydedildi görüntülemek için görüntüle butonuna basınız..");
             con.Close();
@@ -63,14 +63,13 @@ namespace GocmenOtomasyon
             try
                 {
                     string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
-                    //Sorgu Görüntüleme
-                    string Query = "select * from  tbl_gocmen ";
+                    string Query = "SELECT * FROM  tbl_gocmen ";
                     MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                     MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
                     MyConn2.Open();
-                    
-                    MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+
+                    MySqlDataAdapter MyAdapter = DaoClass.GetMySqlDataAdapter();
                     MyAdapter.SelectCommand = MyCommand2;
                     DataTable dTable = new DataTable();
                     MyAdapter.Fill(dTable);
@@ -83,20 +82,30 @@ namespace GocmenOtomasyon
 
                     MessageBox.Show(ex.Message);
                 }
-            
+            MySqlConnection con1 = DaoClass.GetMySqlConnection();
+            con1.Open();
+            string query = "SELECT COUNT(gocmen_id) FROM tbl_gocmen";
+            MySqlCommand command = new MySqlCommand(query, con1);
+            MySqlDataReader dr = command.ExecuteReader();
+            while (dr.Read())
+            {
+                sayici.Text = dr.GetString(0);
+            }
+
+            con1.Close();
+
         }
 
         private void ekle_forms_Load(object sender, EventArgs e)
         {
             string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
-            //Sorgu Görüntüleme
-            string Query = "select * from  tbl_gocmen ";
+            string Query = "SELECT * FROM  tbl_gocmen ";
             MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
             MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
             MyConn2.Open();
 
-            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+            MySqlDataAdapter MyAdapter = DaoClass.GetMySqlDataAdapter();
             MyAdapter.SelectCommand = MyCommand2;
             DataTable dTable = new DataTable();
             MyAdapter.Fill(dTable);
@@ -107,7 +116,7 @@ namespace GocmenOtomasyon
             con.Open();
             MySqlCommand goc_connect = con.CreateCommand();
             goc_connect.CommandType = CommandType.Text;
-            goc_connect.CommandText = "select * from tbl_goc";
+            goc_connect.CommandText = "SELECT * FROM tbl_goc";
             dr = goc_connect.ExecuteReader();
 
             while (dr.Read())
@@ -123,7 +132,7 @@ namespace GocmenOtomasyon
             con.Open();
             MySqlCommand ulke_connect = con.CreateCommand();
             ulke_connect.CommandType = CommandType.Text;
-            ulke_connect.CommandText = "select * from tbl_gocmen_ulkesi";
+            ulke_connect.CommandText = "SELECT * FROM tbl_gocmen_ulkesi";
             dr1 = ulke_connect.ExecuteReader();
 
           
@@ -140,7 +149,7 @@ namespace GocmenOtomasyon
             con.Open();
             MySqlCommand sehir_connect = con.CreateCommand();
             sehir_connect.CommandType = CommandType.Text;
-            sehir_connect.CommandText = "select * from tbl_kaldigi_sehir";
+            sehir_connect.CommandText = "SELECT * FROM tbl_kaldigi_sehir";
             dr2 = sehir_connect.ExecuteReader();
 
 
@@ -157,7 +166,7 @@ namespace GocmenOtomasyon
             con.Open();
             MySqlCommand kampc_connect = con.CreateCommand();
             kampc_connect.CommandType = CommandType.Text;
-            kampc_connect.CommandText = "select * from tbl_kamp";
+            kampc_connect.CommandText = "SELECT * FROM tbl_kamp";
             dr3 = kampc_connect.ExecuteReader();
 
             while (dr3.Read())
@@ -173,7 +182,7 @@ namespace GocmenOtomasyon
             con.Open();
             MySqlCommand meslek_connect = con.CreateCommand();
             meslek_connect.CommandType = CommandType.Text;
-            meslek_connect.CommandText = "select * from tbl_meslek";
+            meslek_connect.CommandText = "SELECT * FROM tbl_meslek";
             dr4 = meslek_connect.ExecuteReader();
 
             while (dr4.Read())
@@ -210,6 +219,14 @@ namespace GocmenOtomasyon
 
             }
 
+        }
+        private void don_btn_Click(object sender, EventArgs e)
+        {
+            gocmen_ekleme_formu formkapa = new gocmen_ekleme_formu();
+            formkapa.Close();
+            tablolar_ekleme form = new tablolar_ekleme();
+            form.Show();
+            this.Hide();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -268,13 +285,6 @@ namespace GocmenOtomasyon
 
         }
 
-        private void don_btn_Click(object sender, EventArgs e)
-        {
-            gocmen_ekleme_formu formkapa = new gocmen_ekleme_formu();
-            formkapa.Close();
-            tablolar_ekleme form = new tablolar_ekleme();
-            form.Show();
-            this.Hide();
-        }
+      
     }
 }

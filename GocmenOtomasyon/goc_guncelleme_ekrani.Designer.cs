@@ -49,7 +49,7 @@
             // yenile_btn
             // 
             this.yenile_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.yenile_btn.Location = new System.Drawing.Point(751, 463);
+            this.yenile_btn.Location = new System.Drawing.Point(893, 463);
             this.yenile_btn.Name = "yenile_btn";
             this.yenile_btn.Size = new System.Drawing.Size(200, 65);
             this.yenile_btn.TabIndex = 47;
@@ -60,7 +60,7 @@
             // guncel_btn
             // 
             this.guncel_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guncel_btn.Location = new System.Drawing.Point(968, 463);
+            this.guncel_btn.Location = new System.Drawing.Point(1099, 463);
             this.guncel_btn.Name = "guncel_btn";
             this.guncel_btn.Size = new System.Drawing.Size(230, 65);
             this.guncel_btn.TabIndex = 46;
@@ -79,10 +79,10 @@
             // 
             // don_btn
             // 
-            this.don_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.don_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.don_btn.Location = new System.Drawing.Point(13, 463);
             this.don_btn.Name = "don_btn";
-            this.don_btn.Size = new System.Drawing.Size(129, 65);
+            this.don_btn.Size = new System.Drawing.Size(132, 28);
             this.don_btn.TabIndex = 49;
             this.don_btn.Text = "Geri";
             this.don_btn.UseVisualStyleBackColor = true;
@@ -92,6 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1342, 526);
             this.Controls.Add(this.don_btn);
             this.Controls.Add(this.label2);

@@ -15,7 +15,7 @@ namespace GocmenOtomasyon
     public partial class meslek_form : Form
     {
 
-        MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=gocmenotomasyon");
+        MySqlConnection con = DaoClass.GetMySqlConnection();
         private MySqlDataReader dr;
         public meslek_form()
         {
@@ -28,7 +28,7 @@ namespace GocmenOtomasyon
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "insert into tbl_meslek(meslek_ad)values('" + meslektxb.Text + "')";
+            cmd.CommandText = "INSERT INTO tbl_meslek(meslek_ad)VALUES('" + meslektxb.Text + "')";
             cmd.ExecuteNonQuery();
             if (meslektxb is TextBox)
             {
@@ -49,20 +49,19 @@ namespace GocmenOtomasyon
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
-                //Display query
-                string Query = "select * from  tbl_meslek ";
+                string Query = "SELECT * FROM  tbl_meslek ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
                 MyConn2.Open();
-                //For offline connection we weill use  MySqlDataAdapter class.
-                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+
+                MySqlDataAdapter MyAdapter = DaoClass.GetMySqlDataAdapter();
                 MyAdapter.SelectCommand = MyCommand2;
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
 
 
-                dataGridView1.DataSource = dTable; // here i have assign dTable object to the dataGridView1 object to display data.
+                dataGridView1.DataSource = dTable; 
 
                 MyConn2.Close();
             }
@@ -73,11 +72,6 @@ namespace GocmenOtomasyon
             }
 
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             meslek_form formkapa = new meslek_form();
@@ -86,6 +80,12 @@ namespace GocmenOtomasyon
             form.Show();
             this.Hide();
         }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
  }
 

@@ -32,6 +32,8 @@
             this.lst_ulke = new System.Windows.Forms.Button();
             this.goclabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.sayici = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             // lst_ulke
             // 
             this.lst_ulke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lst_ulke.Location = new System.Drawing.Point(556, 515);
+            this.lst_ulke.Location = new System.Drawing.Point(565, 514);
             this.lst_ulke.Name = "lst_ulke";
             this.lst_ulke.Size = new System.Drawing.Size(113, 47);
             this.lst_ulke.TabIndex = 24;
@@ -77,11 +79,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(958, 515);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(165, 20);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Ülkedeki kamp sayısı";
+            // 
+            // sayici
+            // 
+            this.sayici.Location = new System.Drawing.Point(1153, 515);
+            this.sayici.Name = "sayici";
+            this.sayici.Size = new System.Drawing.Size(100, 22);
+            this.sayici.TabIndex = 29;
+            // 
             // listelemeform_kamp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1330, 646);
+            this.Controls.Add(this.sayici);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lst_ulke);
@@ -100,5 +122,7 @@
         private System.Windows.Forms.Button lst_ulke;
         private System.Windows.Forms.Label goclabel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox sayici;
     }
 }

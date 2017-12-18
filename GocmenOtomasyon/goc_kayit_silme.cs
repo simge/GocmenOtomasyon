@@ -22,8 +22,6 @@ namespace GocmenOtomasyon
         private void baglan()
         {
             string bag;
-
-
             MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder(@"server=localhost;user id=root;database=gocmenotomasyon");
 
             bag = build.ToString();
@@ -31,7 +29,7 @@ namespace GocmenOtomasyon
 
             string sql = "SELECT * FROM tbl_goc";
             DataTable dt = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
 
             command.CommandText = sql;
@@ -73,7 +71,7 @@ namespace GocmenOtomasyon
 
             string sql = "SELECT * FROM tbl_gocmen";
             DataTable dt = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
 
             command.CommandText = sql;
@@ -94,7 +92,7 @@ namespace GocmenOtomasyon
 
             string sql = "SELECT * FROM tbl_gocmen";
             DataTable dt = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
 
             command.CommandText = sql;

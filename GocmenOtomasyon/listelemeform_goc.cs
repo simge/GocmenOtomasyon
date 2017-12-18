@@ -49,6 +49,17 @@ namespace GocmenOtomasyon
 
                 MessageBox.Show(ex.Message);
             }
+            MySqlConnection con1 = DaoClass.GetMySqlConnection();
+            con1.Open();
+            string query = "SELECT COUNT(goc_id) FROM tbl_goc";
+            MySqlCommand command = new MySqlCommand(query, con1);
+            MySqlDataReader dr = command.ExecuteReader();
+            while (dr.Read())
+            {
+                sayici.Text = dr.GetString(0);
+            }
+
+            con1.Close();
 
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

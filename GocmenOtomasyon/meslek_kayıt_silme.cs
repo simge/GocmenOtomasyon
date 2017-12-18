@@ -30,7 +30,7 @@ namespace GocmenOtomasyon
 
             string sql = "SELECT * FROM tbl_meslek";
             DataTable dt = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
 
             command.CommandText = sql;
@@ -73,7 +73,7 @@ namespace GocmenOtomasyon
 
             string sql = "SELECT * FROM tbl_meslek";
             DataTable dt = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
 
             command.CommandText = sql;

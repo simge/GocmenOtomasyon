@@ -69,7 +69,7 @@
             // meslekbtn
             // 
             this.meslekbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.meslekbtn.Location = new System.Drawing.Point(92, 218);
+            this.meslekbtn.Location = new System.Drawing.Point(92, 201);
             this.meslekbtn.Name = "meslekbtn";
             this.meslekbtn.Size = new System.Drawing.Size(97, 32);
             this.meslekbtn.TabIndex = 3;
@@ -80,7 +80,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(277, 218);
+            this.button1.Location = new System.Drawing.Point(92, 271);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 32);
             this.button1.TabIndex = 4;
@@ -111,6 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1309, 485);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -120,7 +121,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "meslek_form";
-            this.Text = "Form2";
+            this.Text = "meslek_form";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

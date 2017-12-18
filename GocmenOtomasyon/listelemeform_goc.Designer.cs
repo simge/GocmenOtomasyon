@@ -32,6 +32,8 @@
             this.goclabel = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.don_btn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.sayici = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,11 +78,31 @@
             this.don_btn.UseVisualStyleBackColor = true;
             this.don_btn.Click += new System.EventHandler(this.don_btn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(929, 498);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(213, 20);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Göç türlerinin toplam sayısı";
+            // 
+            // sayici
+            // 
+            this.sayici.Location = new System.Drawing.Point(1204, 496);
+            this.sayici.Name = "sayici";
+            this.sayici.Size = new System.Drawing.Size(100, 22);
+            this.sayici.TabIndex = 18;
+            // 
             // listelemeform_goc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1339, 644);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.sayici);
             this.Controls.Add(this.don_btn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lst_goc);
@@ -99,5 +121,7 @@
         private System.Windows.Forms.Label goclabel;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button don_btn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox sayici;
     }
 }

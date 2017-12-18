@@ -14,7 +14,7 @@ namespace GocmenOtomasyon
 {
     public partial class kamp_form : Form
     {
-        MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=gocmenotomasyon");
+        MySqlConnection con = DaoClass.GetMySqlConnection();
         private MySqlDataReader dr;
         public kamp_form()
         {
@@ -42,7 +42,7 @@ namespace GocmenOtomasyon
                 }
             }
 
-            cmd.CommandText = "insert into tbl_kamp(sehir_id,kamp_ad, kurul_trh) values ('" + Int32.Parse(sehir_value) + "','" + kampadi.Text + "','" + kamptrh.Text + "')";
+            cmd.CommandText = "INSERT INTO tbl_kamp(sehir_id,kamp_ad, kurul_trh) values ('" + Int32.Parse(sehir_value) + "','" + kampadi.Text + "','" + kamptrh.Text + "')";
             cmd.ExecuteNonQuery();
             if (kampadi is TextBox)
             {
@@ -63,7 +63,7 @@ namespace GocmenOtomasyon
             con.Open();
             MySqlCommand sehir_connect = con.CreateCommand();
             sehir_connect.CommandType = CommandType.Text;
-            sehir_connect.CommandText = "select * from tbl_kaldigi_sehir";
+            sehir_connect.CommandText = "SELECT * FROM tbl_kaldigi_sehir";
             dr = sehir_connect.ExecuteReader();
 
             while (dr.Read())
@@ -93,19 +93,19 @@ namespace GocmenOtomasyon
             {
                 string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
                 //Display query
-                string Query = "select * from  tbl_kamp ";
+                string Query = "SELECT * FROM  tbl_kamp ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
                 MyConn2.Open();
-                //For offline connection we weill use  MySqlDataAdapter class.
-                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+
+                MySqlDataAdapter MyAdapter = DaoClass.GetMySqlDataAdapter();
                 MyAdapter.SelectCommand = MyCommand2;
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
 
 
-                dataGridView1.DataSource = dTable; // here i have assign dTable object to the dataGridView1 object to display data.
+                dataGridView1.DataSource = dTable; 
 
                 MyConn2.Close();
             }
@@ -116,6 +116,14 @@ namespace GocmenOtomasyon
             }
 
         }
+        private void don_btn_Click(object sender, EventArgs e)
+        {
+            kamp_form formkapa = new kamp_form();
+            formkapa.Close();
+            tablolar_ekleme form = new tablolar_ekleme();
+            form.Show();
+            this.Hide();
+        }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -125,14 +133,7 @@ namespace GocmenOtomasyon
 
         }
 
-        private void don_btn_Click(object sender, EventArgs e)
-        {
-            kamp_form formkapa = new kamp_form();
-            formkapa.Close();
-            tablolar_ekleme form = new tablolar_ekleme();
-            form.Show();
-            this.Hide();
-        }
+       
     }
  }
 

@@ -66,7 +66,13 @@
     <Compile Include="arama_gocmen.Designer.cs">
       <DependentUpon>arama_gocmen.cs</DependentUpon>
     </Compile>
-    <Compile Include="DaoSinifi.cs" />
+    <Compile Include="baglanti_tablosu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baglanti_tablosu.Designer.cs">
+      <DependentUpon>baglanti_tablosu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaoClass.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     </Compile>
     <EmbeddedResource Include="arama_gocmen.resx">
       <DependentUpon>arama_gocmen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baglanti_tablosu.resx">
+      <DependentUpon>baglanti_tablosu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gocmen_ekleme_formu.resx">
       <DependentUpon>gocmen_ekleme_formu.cs</DependentUpon>

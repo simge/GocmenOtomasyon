@@ -23,7 +23,7 @@ namespace GocmenOtomasyon
    
         private void Form2_Load(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("server = localhost; user id = root; database = gocmenotomasyon");
+            MySqlConnection con = DaoClass.GetMySqlConnection();
             sda = new MySqlDataAdapter(@"SELECT `gocmen_id`, `goc_id`, `ulke_id`, `sehir_id`, `kamp_id`, `meslek_id`, `gocmen_ad`, `gocmen_soyad`, `gocmen_yas`, `gocmen_cinsiyet`, `gocmen_egitim_duzeyi` FROM `tbl_gocmen`", con);
             dt = new DataTable();
             sda.Fill(dt);
@@ -38,11 +38,19 @@ namespace GocmenOtomasyon
 
         private void yenile_btn_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("server = localhost; user id = root; database = gocmenotomasyon");
+            MySqlConnection con = DaoClass.GetMySqlConnection();
             sda = new MySqlDataAdapter(@"SELECT `gocmen_id`, `goc_id`, `ulke_id`, `sehir_id`, `kamp_id`, `meslek_id`, `gocmen_ad`, `gocmen_soyad`, `gocmen_yas`, `gocmen_cinsiyet`, `gocmen_egitim_duzeyi` FROM `tbl_gocmen`",con);
             dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
+        }
+        private void don_btn_Click(object sender, EventArgs e)
+        {
+            gocmen_guncel_form formkapa = new gocmen_guncel_form();
+            formkapa.Close();
+            guncelleme_form_ekranı form = new guncelleme_form_ekranı();
+            form.Show();
+            this.Hide();
         }
 
         private void label2_Click_1(object sender, EventArgs e)
@@ -89,13 +97,6 @@ namespace GocmenOtomasyon
 
         }
 
-        private void don_btn_Click(object sender, EventArgs e)
-        {
-            gocmen_guncel_form formkapa = new gocmen_guncel_form();
-            formkapa.Close();
-            guncelleme_form_ekranı form = new guncelleme_form_ekranı();
-            form.Show();
-            this.Hide();
-        }
+        
     }
 }

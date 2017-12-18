@@ -13,7 +13,7 @@ namespace GocmenOtomasyon
 {
     public partial class sehir_ekle : Form
     {
-        MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=gocmenotomasyon");
+        MySqlConnection con = DaoClass.GetMySqlConnection();
         private MySqlDataReader dr;
         public sehir_ekle()
         {
@@ -26,7 +26,7 @@ namespace GocmenOtomasyon
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "insert into tbl_kaldigi_sehir(sehir_ad)values('" + sehir_tbox.Text + "')";
+            cmd.CommandText = "INSERT INTO tbl_kaldigi_sehir(sehir_ad)values('" + sehir_tbox.Text + "')";
 
 
             if (sehir_tbox is TextBox)
@@ -50,20 +50,19 @@ namespace GocmenOtomasyon
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
-                //Display query
-                string Query = "select * from  tbl_kaldigi_sehir ";
+                string Query = "SELECT * FROM  tbl_kaldigi_sehir ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
                 MyConn2.Open();
-                //For offline connection we weill use  MySqlDataAdapter class.
-                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+
+                MySqlDataAdapter MyAdapter = DaoClass.GetMySqlDataAdapter();
                 MyAdapter.SelectCommand = MyCommand2;
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
 
 
-                dataGridView1.DataSource = dTable; // here i have assign dTable object to the dataGridView1 object to display data.
+                dataGridView1.DataSource = dTable;
 
                 MyConn2.Close();
             }
@@ -74,11 +73,6 @@ namespace GocmenOtomasyon
             }
 
         }
-        private void sehir_tbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             sehir_ekle formkapa = new sehir_ekle();
@@ -87,6 +81,12 @@ namespace GocmenOtomasyon
             form.Show();
             this.Hide();
         }
+        private void sehir_tbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
  }
 

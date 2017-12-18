@@ -30,7 +30,7 @@ namespace GocmenOtomasyon
 
             string sql = "SELECT * FROM tbl_yardim_kurulus";
             DataTable dt = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
 
             command.CommandText = sql;
@@ -48,7 +48,7 @@ namespace GocmenOtomasyon
             baglanti = new MySqlConnection(bag);
             string sql = "DELETE FROM tbl_yardim_kurulus WHERE yk_id=  '" + giristxb.Text + "'";
             DataTable dt = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
 
             command.CommandText = sql;
@@ -72,7 +72,7 @@ namespace GocmenOtomasyon
 
             string sql = "SELECT * FROM tbl_yardim_kurulus";
             DataTable dt = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
 
             command.CommandText = sql;
@@ -93,7 +93,7 @@ namespace GocmenOtomasyon
 
             string sql = "SELECT * FROM tbl_yardim_kurulus";
             DataTable dt = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlDataAdapter adapter = DaoClass.GetMySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
 
             command.CommandText = sql;

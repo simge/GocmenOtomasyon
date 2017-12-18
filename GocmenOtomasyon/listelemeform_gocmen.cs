@@ -13,9 +13,9 @@ using MySql.Data.MySqlClient;
 namespace GocmenOtomasyon
 {
     public partial class listelemeform_gocmen : Form
-    { 
+    {
 
-         MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=gocmenotomasyon");
+        MySqlConnection con = DaoClass.GetMySqlConnection();
     
         public listelemeform_gocmen()
         {
@@ -27,13 +27,13 @@ namespace GocmenOtomasyon
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=gocmenotomasyon";
-                string Query = "select * from  tbl_gocmen ";
+                string Query = "SELECT * FROM  tbl_gocmen ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
                 MyConn2.Open();
-              
-                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+
+                MySqlDataAdapter MyAdapter = DaoClass.GetMySqlDataAdapter();
                 MyAdapter.SelectCommand = MyCommand2;
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
@@ -48,8 +48,27 @@ namespace GocmenOtomasyon
 
                 MessageBox.Show(ex.Message);
             }
+            MySqlConnection con1 = DaoClass.GetMySqlConnection();
+            con1.Open();
+            string query = "SELECT COUNT(gocmen_id) FROM tbl_gocmen";
+            MySqlCommand command = new MySqlCommand(query, con1);
+            MySqlDataReader dr = command.ExecuteReader();
+            while (dr.Read())
+            {
+                sayici.Text = dr.GetString(0);
+            }
+
+            con1.Close();
         }
-        
+        private void don_btn_Click(object sender, EventArgs e)
+        {
+            listelemeform_gocmen formkapa = new listelemeform_gocmen();
+            formkapa.Close();
+            listeleme_formu form = new listeleme_formu();
+            form.Show();
+            this.Hide();
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -60,13 +79,14 @@ namespace GocmenOtomasyon
 
         }
 
-        private void don_btn_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            listelemeform_gocmen formkapa = new listelemeform_gocmen();
-            formkapa.Close();
-            listeleme_formu form = new listeleme_formu();
-            form.Show();
-            this.Hide();
+
+        }
+
+        private void sayici_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
